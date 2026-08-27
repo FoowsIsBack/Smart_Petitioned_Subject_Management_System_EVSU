@@ -79,6 +79,10 @@ header{
     cursor: pointer;
 }
 
+.student:active, .employee:active{
+    opacity: 0.9;
+}
+
 .student h3, .employee h3{
     font-style: italic;
     margin-bottom: 20px;
