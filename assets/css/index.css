@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("/assets/image/bg_evsu.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.05);
+    z-index: -2;
+}
+
+body::after{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.774);
+    z-index: -1;
+}
+
+header{
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.title{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 25px;
+}
+
+.title h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+}
+
+.main3{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.student img, .employee img{
+    width: 35%;
+}
+
+.student{
+    background-color: rgb(43, 151, 44);
+    padding: 24px;
+}
+
+.employee {
+    background-color: rgb(139, 10, 10);
+    padding: 24px;
+}
+
+.student, .employee{
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.student h3, .employee h3{
+    font-style: italic;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 2px 4px rgb(0, 0, 0);
+}
+
+.student:hover, .employee:hover{
+    border: 2px solid black;
+}
+
+footer{
+    margin-top: 250px;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+footer p{
+    margin: 5px 0;
+    font-size: 14px;
+    color: rgb(30, 41, 59);
+}
