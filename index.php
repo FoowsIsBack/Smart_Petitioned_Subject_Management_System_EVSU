@@ -16,7 +16,7 @@
         </header>
         </div>
         <div class="title">
-            <h1>Smart Petitioned Subject Management System</h1>
+            <h1>Smart Petition Management System</h1>
         </div>
         <div class="main3">
             <div class="student" onclick="studentPage()">
@@ -29,7 +29,7 @@
             </div>
         </div>
         <footer>
-            <p>© 2026 Smart Petitioned Subject Management System</p>
+            <p>© 2026 Smart Petition Management System</p>
             <p>Eastern Visayas State University</p>
         </footer>
     </div>
