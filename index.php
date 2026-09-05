@@ -11,9 +11,9 @@
 
     <div class="main">
         <div class="main2">
-        <header>
-            <img src="./assets/image/evsu_head.png" alt="evsuhead">
-        </header>
+            <header>
+                <img src="./assets/image/evsu_head.png" alt="evsuhead">
+            </header>
         </div>
         <div class="title">
             <h1>Smart Petitioned Subject Management System</h1>
