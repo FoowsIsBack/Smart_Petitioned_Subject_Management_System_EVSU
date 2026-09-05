@@ -1,7 +1,7 @@
 function studentPage(){
-    window.location.href = "student_login.php";
+    window.location.href = "/student/student_login.php";
 }
 
 function employeePage(){
-    window.location.href = "employee_login.php";
+    window.location.href = "/employee/employee_login.php";
 }
