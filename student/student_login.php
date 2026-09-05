@@ -12,7 +12,7 @@
     <div class="main">
         <div class="login_card">
             <img src="/assets/icons/evsu_logo.png" alt="evsulogo">
-            <h2>Student Petiton Portal</h2>
+            <h2>Student Petition Portal</h2>
             <h4>Eastern Visayas University</h4>
             <div class="userinput">
                 <h2>Sign In</h2>
