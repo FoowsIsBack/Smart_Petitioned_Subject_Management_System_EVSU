@@ -114,3 +114,154 @@ button:active{
 .backer:hover{
     background-color: rgba(175, 168, 168, 0.352);
 }
+
+/* Tablet Devices */
+@media (max-width: 768px){
+
+    .forgotpass{
+        width: 60%;
+        margin: 70px auto 0;
+        padding: 25px 20px;
+    }
+
+    .forgotpass img{
+        width: 100px;
+        max-width: 30%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .forgotpass h2{
+        font-size: 25px;
+    }
+
+    .forgotpass p{
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    input{
+        width: 90%;
+        font-size: 16px;
+    }
+
+    button{
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .backer{
+        width: 90%;
+    }
+
+}
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    .forgotpass{
+        width: 90%;
+        max-width: 400px;
+        margin: 50px auto 0;
+        padding: 25px 15px;
+        border-radius: 10px;
+    }
+
+    .forgotpass img{
+        width: 80px;
+        max-width: 25%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .forgotpass h2{
+        font-size: 22px;
+        margin-top: 15px;
+    }
+
+    .forgotpass p{
+        font-size: 13px;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+
+    input{
+        width: 90%;
+        padding: 11px;
+        font-size: 15px;
+        margin-top: 12px;
+    }
+
+    input::placeholder{
+        font-size: 13px;
+    }
+
+    button{
+        width: 90%;
+        padding: 11px;
+        font-size: 15px;
+    }
+
+    .clicker{
+        margin-top: 12px;
+    }
+
+    .backer{
+        width: 90%;
+        margin-top: 8px;
+        margin-bottom: 15px;
+    }
+
+}
+
+/* Small Mobile Devices */
+@media (max-width: 380px){
+
+    .forgotpass{
+        width: 92%;
+        max-width: 350px;
+        margin: 35px auto 0;
+        padding: 20px 12px;
+    }
+
+    .forgotpass img{
+        width: 65px;
+        max-width: 23%;
+        height: auto;
+        margin-top: 5px;
+    }
+
+    .forgotpass h2{
+        font-size: 20px;
+        margin-top: 12px;
+    }
+
+    .forgotpass p{
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 0 5px;
+    }
+
+    input{
+        width: 92%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    input::placeholder{
+        font-size: 12px;
+    }
+
+    button{
+        width: 92%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .backer{
+        width: 92%;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+}
