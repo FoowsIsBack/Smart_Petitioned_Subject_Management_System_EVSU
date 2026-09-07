@@ -13,7 +13,7 @@
         <div class="forgotpass">
             <img src="/assets/icons/evsu_logo.png" alt="evsulogo">
             <h2>Forgot Password</h2>
-            <p>Enter your EVSU email</p>
+            <p>Enter your EVSU email to receive an OTP</p>
             <div class="inputers">
                 <form action="employee_forgotpass.php" method="post">
                     <input type="email" name="email" id="email" placeholder="yourname@evsu.edu.ph" pattern="[a-zA-Z0-9._%+-]+@evsu\.edu\.ph" title="Please enter a valid EVSU email address" required>
