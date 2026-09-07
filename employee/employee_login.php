@@ -16,7 +16,7 @@
             <h4>Eastern Visayas University</h4>
             <div class="userinput">
                 <h2>Sign In</h2>
-                <form action="student_login.php" method="post">
+                <form action="employee_login.php" method="post">
                     <input type="text" name="user" id="user" placeholder="Username" required>
                     <div class="password">
                         <input type="password" name="password" id="password" placeholder="Password" required>
