@@ -22,7 +22,7 @@
                     </div>
                 </form>
                 <div class="clicker">
-                    <button class="backer" onclick="employeePage()">Back to login</button>
+                    <button type="button" class="backer" onclick="employeePage()">Back to login</button>
                 </div>
             </div>
         </div>
