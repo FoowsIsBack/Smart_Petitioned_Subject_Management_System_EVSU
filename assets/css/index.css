@@ -54,7 +54,7 @@ header{
     margin-top: 100px;
     display: flex;
     justify-content: center;
-    gap: 5%;
+    gap: 10%;
 }
 
 .student img, .employee img{
@@ -105,4 +105,128 @@ footer p{
     margin: 5px 0;
     font-size: 14px;
     color: rgb(30, 41, 59);
+}
+
+/* Tablet Devices */
+@media (max-width: 768px){
+
+    header{
+        padding: 12px 15px;
+    }
+
+    header img{
+        max-height: 90px;
+    }
+
+    .title{
+        margin: 40px 15px 25px;
+    }
+
+    .main3{
+        width: 90%;
+        gap: 50px;
+    }
+
+    .student, .employee{
+        width: 45%;
+        min-height: 200px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    header{
+        padding: 10px 12px;
+    }
+
+    header img{
+        width: 100%;
+        max-height: 75px;
+    }
+
+    .title{
+        margin: 35px 15px 25px;
+    }
+
+    .title h1{
+        font-size: 26px;
+    }
+
+    .main3{
+        margin-left: 25px;
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        flex: none;
+    }
+
+    .student, .employee{
+        width: 100%;
+        max-width: 350px;
+        min-height: 180px;
+        padding: 20px;
+    }
+
+    .student img, .employee img{
+        width: 70px;
+        height: 70px;
+        margin-bottom: 15px;
+    }
+
+    .student h3, .employee h3{
+        font-size: 18px;
+    }
+
+    footer{
+        padding: 15px 10px;
+    }
+
+    footer p{
+        font-size: 12px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 380px){
+
+    header{
+        padding: 8px 10px;
+    }
+
+    header img{
+        max-height: 65px;
+    }
+
+    .title{
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+    .title h1 {
+        font-size: 22px;
+    }
+
+    .student, .employee{
+        min-height: 160px;
+        padding: 18px;
+    }
+
+    .student img, .employee img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .student h3, .employee h3{
+        font-size: 17px;
+    }
+
+    footer{
+        padding: 12px 8px;
+    }
+
+    footer p{
+        font-size: 11px;
+    }
 }
