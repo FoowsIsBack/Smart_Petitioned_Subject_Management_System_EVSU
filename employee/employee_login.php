@@ -13,13 +13,13 @@
         <div class="login_card">
             <img src="/assets/icons/evsu_logo.png" alt="evsulogo">
             <h2>Petition Management Portal</h2>
-            <h4>Eastern Visayas University</h4>
+            <h4>Eastern Visayas State University</h4>
             <div class="userinput">
                 <h2>Sign In</h2>
                 <form action="employee_login.php" method="post">
-                    <input type="text" name="user" id="user" placeholder="Username" required>
+                    <input type="text" name="user" id="user" placeholder="Username" autocomplete="username" required>
                     <div class="password">
-                        <input type="password" name="password" id="password" placeholder="Password" required>
+                        <input type="password" name="password" id="password" placeholder="Password" autocomplete="current-password" required>
                         <img class="toggle_password" src="/assets/icons/showpass.png" alt="Toggle password" onclick="togglePassword()">
                     </div>
                     <div class="clicker">
