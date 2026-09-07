@@ -19,10 +19,10 @@
                 <form action="student_login.php" method="post">
                     <input type="text" name="studentid" id="studentid" placeholder="Student ID" required>
                     <input type="email" name="evsuemail" id="evsuemail" placeholder="Evsu Email Address" pattern="[a-zA-Z0-9._%+-]+@evsu\.edu\.ph" required>
+                    <div class="clicker">
+                        <button type="submit">Sent OTP</button>
+                    </div>
                 </form>
-                <div class="clicker">
-                    <button type="submit">Sent OTP</button>
-                </div>
             </div>
         </div>
         <div class="backpage">

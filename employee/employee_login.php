@@ -22,12 +22,12 @@
                         <input type="password" name="password" id="password" placeholder="Password" required>
                         <img class="toggle_password" src="/assets/icons/showpass.png" alt="Toggle password" onclick="togglePassword()">
                     </div>
+                    <div class="clicker">
+                        <button type="submit">Login</button>
+                    </div>
                 </form>
-                <div class="clicker">
-                    <button type="submit">Login</button>
-                </div>
                 <div class="forgotpass">
-                    <a href="/employee_forgotpass.php">Forgot password?</a>
+                    <a href="employee_forgotpass.php">Forgot password?</a>
                 </div>
             </div>
         </div>
