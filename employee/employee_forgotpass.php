@@ -19,9 +19,11 @@
                     <input type="email" name="email" id="email" placeholder="yourname@evsu.edu.ph" pattern="[a-zA-Z0-9._%+-]+@evsu\.edu\.ph" title="Please enter a valid EVSU email address" required>
                     <div class="clicker">
                         <button type="submit">Send OTP</button>
-                        <button class="backer" onclick="employeePage()">Back to login</button>
                     </div>
                 </form>
+                <div class="clicker">
+                    <button class="backer" onclick="employeePage()">Back to login</button>
+                </div>
             </div>
         </div>
     </div>
