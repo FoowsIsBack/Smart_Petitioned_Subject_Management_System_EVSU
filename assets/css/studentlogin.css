@@ -132,3 +132,193 @@ button:active{
 .backpage a:active{
     opacity: 0.8;
 }
+
+/* Tablet Devices */
+@media (max-width: 768px){
+
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 30px 20px;
+    }
+
+    .login_card{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .login_card img{
+        width: 100px;
+        max-width: 30%;
+        height: auto;
+    }
+
+    .login_card > h2{
+        font-size: 25px;
+    }
+
+    h4{
+        font-size: 13px;
+    }
+
+    .userinput > h2{
+        margin-left: 8%;
+        margin-top: 40px;
+        font-size: 22px;
+    }
+
+    .userinput input{
+        width: 90%;
+        font-size: 16px;
+    }
+
+    button{
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .backpage{
+        position: static;
+        width: 100%;
+        margin: 15px auto 0;
+        text-align: center;
+    }
+
+}
+
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px 10px;
+    }
+
+    .login_card{
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 15px 10px;
+    }
+
+    .login_card img{
+        width: 80px;
+        max-width: 25%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .login_card > h2{
+        font-size: 22px;
+    }
+
+    h4{
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    .userinput > h2{
+        margin-left: 7%;
+        margin-top: 35px;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .userinput input{
+        width: 90%;
+        padding: 11px;
+        font-size: 15px;
+    }
+
+    input::placeholder{
+        font-size: 13px;
+    }
+
+    button{
+        width: 90%;
+        padding: 11px;
+        font-size: 15px;
+    }
+
+    .clicker{
+        margin-top: 12px;
+    }
+
+    .backpage{
+        position: static;
+        width: 100%;
+        margin: 10px auto 0;
+        text-align: center;
+    }
+
+}
+
+/* Small Mobile Devices */
+@media (max-width: 380px){
+
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 15px 8px;
+    }
+
+    .login_card{
+        width: 92%;
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 12px 8px;
+    }
+
+    .login_card img{
+        width: 65px;
+        max-width: 23%;
+        height: auto;
+        margin-top: 5px;
+    }
+
+    .login_card > h2{
+        font-size: 20px;
+    }
+
+    h4{
+        font-size: 11px;
+    }
+
+    .userinput > h2{
+        margin-left: 7%;
+        margin-top: 30px;
+        font-size: 18px;
+    }
+
+    .userinput input{
+        width: 92%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    input::placeholder{
+        font-size: 12px;
+    }
+
+    button{
+        width: 92%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .backpage{
+        position: static;
+        width: 100%;
+        margin: 10px auto 0;
+        text-align: center;
+    }
+
+}
