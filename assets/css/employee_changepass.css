@@ -88,10 +88,17 @@ input:-webkit-autofill{
 
 .password_requirements{
     text-align: left;
-    margin-top: -18px;
+    margin-top: -10px;
     margin-bottom: 25px;
     font-size: smaller;
     margin-left: 40px;
+}
+
+.password_requirements p{
+    margin-top: -30px;
+    margin-bottom: -3px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .password_requirements li{
@@ -100,37 +107,98 @@ input:-webkit-autofill{
     list-style: none;
 }
 
+.password_requirements li.invalid{
+    color: rgb(220, 53, 69);
+}
+
+.password_requirements li.valid{
+    color: rgb(25, 135, 84);
+}
+
 .password_requirements ul{
     margin-top: -5px;
+    padding: 0;
+    margin: 0;
+}
+
+.error_message{
+    font-size: 12px;
+    color: rgb(220, 53, 69);
+    margin: 4px 0 12px;
+}
+
+.password_field2 > p, .password_field3 > p{
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.input_error{
+    border: 1px solid rgb(220, 53, 69) !important;
+}
+
+.input_valid{
+    border: 1px solid rgb(25, 135, 84) !important;
+}
+
+.strength_container{
+    margin-top: 12px;
+}
+
+.strength_bar{
+    width: 90%;
+    height: 6px;
+    background: rgb(221, 221, 221);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#strengthBar{
+    width: 0;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+#strengthText{
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .toggle_password1{
     position: absolute;
-    left: 390px;
+    right: 10%;
     cursor: pointer;
     width: 25px;
     height: 25px;
     user-select: none;
 }
 
-.toggle_password2{
+.toggle_password1, .toggle_password2, .toggle_password3{
     position: absolute;
-    left: 390px;
-    top: -15px;
-    cursor: pointer;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
     width: 25px;
     height: 25px;
+    max-width: 25px;
+    max-height: 25px;
+    margin: 0;
+    object-fit: contain;
+    cursor: pointer;
     user-select: none;
+    z-index: 10;
 }
 
-.toggle_password3{
+.toggle_password2, .toggle_password3{
     position: absolute;
-    left: 390px;
-    top: -15px;
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    user-select: none;
+    top: 40%;
+}
+
+.input_wrapper{
+    position: relative;
+    width: 100%;
 }
 
 .password_field, .password_field2, .password_field3{
@@ -229,6 +297,18 @@ button:active{
 /* Tablet Devices */
 @media (max-width: 768px){
 
+    .toggle_password1, .toggle_password2, .toggle_password3{
+        width: 18px;
+        height: 18px;
+        max-width: 18px;
+        max-height: 18px;
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        object-fit: contain;
+    }
+
     .forgotpass{
         width: 60%;
         margin: 70px auto 0;
@@ -268,7 +348,31 @@ button:active{
 }
 
 /* Mobile Devices */
-@media (max-width: 600px){
+@media (max-width: 650px){
+
+    .toggle_password1, .toggle_password2, .toggle_password3{
+        width: 18px;
+        height: 18px;
+        max-width: 18px;
+        max-height: 18px;
+        right: 13px;
+        top: 40%;
+        transform: translateY(-50%);
+        margin: 0;
+        object-fit: contain;
+    }
+
+    .toggle_password2, .toggle_password3{
+        width: 18px;
+        height: 18px;
+        max-width: 18px;
+        max-height: 18px;
+        right: 13px;
+        top: 30%;
+        transform: translateY(-50%);
+        margin: 0;
+        object-fit: contain;
+    }
 
     .forgotpass{
         width: 90%;
@@ -327,6 +431,30 @@ button:active{
 
 /* Small Mobile Devices */
 @media (max-width: 380px){
+
+    .toggle_password1, .toggle_password2, .toggle_password3{
+        width: 18px;
+        height: 18px;
+        max-width: 18px;
+        max-height: 18px;
+        right: 13px;
+        top: 40%;
+        transform: translateY(-50%);
+        margin: 0;
+        object-fit: contain;
+    }
+
+    .toggle_password2, .toggle_password3{
+        width: 18px;
+        height: 18px;
+        max-width: 18px;
+        max-height: 18px;
+        right: 13px;
+        top: 30%;
+        transform: translateY(-50%);
+        margin: 0;
+        object-fit: contain;
+    }
 
     .forgotpass{
         width: 92%;
