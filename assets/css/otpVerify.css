@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("/assets/image/bg_evsu.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.05);
+    z-index: -2;
+}
+
+body::after{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.774);
+    z-index: -1;
+}
+
+img{
+    width: 15%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  
+}
+
+.login_card{
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    width: 30%;
+}
+
+h4{
+    color: gray;
+    margin-top: 10px;
+}
+
+.code_expire{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.code_expire p{
+    color: gray;
+    font-size: small;
+}
+
+.code_expire span{
+    color: rgb(128, 0, 0);
+    font-weight: 600;
+}
+
+.clicker{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+button{
+    margin-top: 10px;
+    background-color: rgb(128, 0, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: large;
+    width: 85%;
+}
+
+button:hover{
+    background-color: rgb(97, 5, 5);
+}
+
+button:active{
+    opacity: 0.8;
+}
+
+.backpage{
+    position: absolute;
+    top: 725px;
+    left: 675px;
+}
+
+.backpage a{
+    text-decoration: none;
+    color: red;
+    font-size: small;
+}
+
+.backpage a:hover{
+    color: rgb(43, 151, 44);
+}
+
+.backpage a:active{
+    opacity: 0.8;
+}
+
+.otp_container{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+
+.otp_container input{
+    width: 45px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    font-size: larger;
+    outline: none;
+}
+
+.otp_container input:focus{
+    border: 1px solid rgb(128, 0, 0);
+}
+
+.notReceive_code{
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.notReceive_code h4{
+    color: gray;
+    font-size: small;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.notReceive_code button{
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: rgb(128, 0, 0);
+    font-size: small;
+    font-weight: 600;
+}
+
+.notReceive_code button:hover{
+    background: none;
+    color: rgb(97, 5, 5);
+}
+
+.notReceive_code button:active{
+    opacity: 0.8;
+}
