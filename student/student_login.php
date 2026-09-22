@@ -17,7 +17,7 @@
             <div class="userinput">
                 <h2>Sign In</h2>
                 <form action="student_login.php" method="post">
-                    <input type="text" name="studentid" id="studentid" placeholder="Student ID" autocomplete="username" required>
+                    <!-- <input type="text" name="studentid" id="studentid" placeholder="Student ID" autocomplete="username" required> -->
                     <input type="email" name="evsuemail" id="evsuemail" placeholder="Evsu Email Address" pattern="[a-zA-Z0-9._%+-]+@evsu\.edu\.ph" autocomplete="email" required>
                     <div class="clicker">
                         <button type="submit">Sent OTP</button>
