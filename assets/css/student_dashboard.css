@@ -10,3 +10,111 @@ body{
     position: relative;
     min-height: 100vh;
 }
+
+.main2 header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background-color: rgb(139, 18, 16);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+}
+
+.brand img{
+    width: 55px;
+}
+
+.brand p{
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.student_profile{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.student_profile p{
+    color: white;
+    font-weight: bold;
+}
+
+.dropdown_arrow{
+    margin-bottom: 6px;
+    color: white;
+    font-size: 18px;
+}
+
+.profile_dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 230px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 10;
+}
+
+.profile_dropdown.show{
+    display: block;
+}
+
+.profile_dropdown a{
+    display: block;
+    padding: 12px 15px;
+    color: rgb(50, 50, 50);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.profile_dropdown a:hover{
+    background-color: rgb(245, 245, 245);
+}
+
+.profile_info{
+    padding: 15px;
+}
+
+.profile_info p{
+    color: rgb(40, 40, 40);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.profile_info span{
+    display: block;
+    margin-top: 5px;
+    color: gray;
+    font-size: 12px;
+}
+
+.profile_divider{
+    height: 1px;
+    background-color: rgb(225, 225, 225);
+    margin: 0 15px;
+}
+
+.profile_dropdown a{
+    display: block;
+    padding: 12px 15px;
+    color: rgb(50, 50, 50);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.profile_dropdown a:hover{
+    background-color: rgb(245, 245, 245);
+}
