@@ -373,3 +373,178 @@ body{
     transform: translateY(-50%);
     color: rgb(162, 38, 36);
 }
+
+@media (max-width: 900px){
+
+    .main2 header{
+        padding: 15px 25px;
+    }
+
+    .sidebar{
+        width: 200px;
+    }
+
+    .content{
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .dashboard_cards{
+        gap: 20px;
+    }
+
+    .card1, .card2, .card3{
+        width: 30%;
+    }
+
+}
+
+@media (max-width: 700px){
+
+    .main2 header{
+        padding: 12px 15px;
+    }
+
+    .brand p{
+        font-size: 13px;
+    }
+
+    .brand img{
+        width: 45px;
+    }
+
+    .student_profile{
+        gap: 5px;
+    }
+
+    .student_container p{
+        font-size: 13px;
+    }
+
+    .main_content{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgb(194,194,194);
+        padding: 15px;
+    }
+
+    .sidebar_header{
+        display: none;
+    }
+
+    .sidebar_nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 5px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        scrollbar-width: thin;
+    }
+
+    .sidebar_nav button{
+        flex: 0 0 auto;
+        width: auto;
+        min-width: max-content;
+        white-space: nowrap;
+    }
+
+    .content{
+        margin-left: 0;
+        padding: 20px 15px;
+    }
+
+    .studentwelcome{
+        margin-top: 10px;
+    }
+
+    .studentwelcome h3{
+        font-size: 1.6rem;
+    }
+
+    .dashboard_cards{
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .card1, .card2, .card3{
+        width: calc(50% - 8px);
+    }
+}
+
+@media (max-width: 480px){
+
+    .brand p{
+        font-size: 11px;
+        margin-left: 8px;
+    }
+
+    .brand img{
+        width: 42px;
+    }
+
+    .student_container p{
+        font-size: 12px;
+    }
+
+    .dropdown_arrow{
+        font-size: 16px;
+    }
+
+    .notification_dropdown{
+        position: fixed;
+        top: 70px;
+        right: 10px;
+        width: calc(100vw - 20px);
+    }
+
+    .profile_dropdown{
+        position: fixed;
+        top: 70px;
+        right: 10px;
+        width: calc(100vw - 20px);
+    }
+
+    .sidebar_nav{
+        padding-bottom: 3px;
+    }
+
+    .sidebar_nav button{
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .content{
+        padding: 15px 12px;
+    }
+
+    .studentwelcome h3{
+        font-size: 1.4rem;
+    }
+
+    .studentwelcome p{
+        font-size: 13px;
+    }
+
+    .dashboard_cards{
+        flex-direction: column;
+    }
+
+    .card1, .card2, .card3{
+        width: 100%;
+    }
+
+    .card_icon{
+        width: 28px;
+        height: 28px;
+        right: 15px;
+    }
+}
