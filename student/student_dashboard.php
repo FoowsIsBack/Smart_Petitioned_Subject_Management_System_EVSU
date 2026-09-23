@@ -51,17 +51,58 @@
                 </div>
                 <nav class="sidebar_nav">
                     <button class="dashboard">Dashboard</button>
-                    <button onclick="">Apply for Petition</button>
-                    <button onclick="">My Petitions</button>
-                    <button onclick="">Payment Assessment</button>
+                    <button onclick="applyPetition()">Apply for Petition</button>
+                    <button onclick="myPetition()">My Petition</button>
+                    <button onclick="paymentAssessment()">Payment Assessment</button>
                 </nav>
             </aside>
             <main class="content">
-
+                <div class="studentwelcome">
+                    <h3>Welcome, Kiryll Dave</h3>
+                    <p>BS Information Technology / 3rd Year </p>
+                    <p>Student ID: 2023-10453</p>
+                </div>
+                <div class="dashboard_cards">
+                    <div class="card1">
+                        <div>
+                            <p>MY PETITIONS</p>
+                            <h3>1</h3>
+                        </div>
+                        <svg class="card_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path d="M6 3h9l3 3v15H6V3z"/>
+                            <path d="M15 3v4h3"/>
+                            <path d="M9 11h6"/>
+                            <path d="M9 15h6"/>
+                        </svg>
+                    </div>
+                    <div class="card2">
+                        <div>
+                            <p>APPROVED</p>
+                            <h3>1</h3>
+                        </div>
+                        <svg class="card_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <circle cx="12" cy="12" r="9"/>
+                            <path d="m8 12 2.5 2.5L16 9"/>
+                        </svg>
+                    </div>
+                    <div class="card3">
+                        <div>
+                            <p>AMOUNT PAYABLE</p>
+                            <h3>₱0.00</h3>
+                        </div>
+                        <svg class="card_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <rect x="3" y="5" width="18" height="14" rx="2"/>
+                            <path d="M3 10h18"/>
+                            <path d="M7 15h4"/>
+                        </svg>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
     
+
+    <script src="/assets/js/nextpage.js"></script>
     <script src="/assets/js/student_dropdown.js"></script>
     
 </body>
