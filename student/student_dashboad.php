@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/assets/icons/evsu_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/student_dashboard.css">
-    <title>Dashboard - EVSU Petition Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <title>Student Dashboard - EVSU Petition Portal</title>
 </head>
 <body>
 
@@ -17,8 +18,20 @@
                     <p>Smart Petitioned Subject Management System</p>
                 </div>
                 <div class="student_profile" id="profileButton">
-                    <p>Kiryll Dave</p>
-                    <span class="dropdown_arrow">⌄</span>
+                    <div class="notification" id="notificationButton">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="notification_badge" id="notificationBadge">2</span>
+                        <div class="notification_dropdown" id="notificationDropdown">
+                            <div class="notification_header">
+                                <strong>Notifications</strong>
+                                <button type="button" id="markAllRead">Mark all as read</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="student_container">
+                        <p>Kiryll Dave</p>
+                        <span class="dropdown_arrow">⌄</span>
+                    </div>
                     <div class="profile_dropdown" id="profileDropdown">
                         <div class="profile_info">
                             <p>kirylldavebangcoyo@evsu.edu.ph</p>
@@ -33,7 +46,7 @@
         </div>
     </div>
     
-
     <script src="/assets/js/student_dropdown.js"></script>
+    
 </body>
 </html>
