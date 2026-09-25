@@ -66,7 +66,7 @@
                     <div class="card1">
                         <div>
                             <p>MY PETITIONS</p>
-                            <h3>1</h3>
+                            <h3>0</h3>
                         </div>
                         <svg class="card_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                             <path d="M6 3h9l3 3v15H6V3z"/>
@@ -78,7 +78,7 @@
                     <div class="card2">
                         <div>
                             <p>APPROVED</p>
-                            <h3>1</h3>
+                            <h3>0</h3>
                         </div>
                         <svg class="card_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                             <circle cx="12" cy="12" r="9"/>
