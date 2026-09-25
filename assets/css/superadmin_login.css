@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("/assets/image/bg_evsu.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.05);
+    z-index: -2;
+}
+
+body::after{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.774);
+    z-index: -1;
+}
+
+img{
+    width: 15%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  
+}
+
+.login_card{
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    width: 30%;
+}
+
+h4{
+    color: gray;
+    margin-top: 10px;
+    font-size: smaller;
+}
+
+.userinput > h2{
+    margin-left: 45px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.userinput input{
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: larger;
+    width: 85%;
+    padding: 12px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+input::placeholder{
+    font-size: medium;
+}
+
+input:focus{
+    border: 1px solid rgb(37, 99, 235);
+}
+
+.clicker{
+    margin-bottom: 20px;
+}
+
+button{
+    margin-top: 10px;
+    background-color: rgb(128, 0, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: large;
+    width: 85%;
+}
+
+button:hover{
+    background-color: rgb(97, 5, 5);
+}
+
+button:active{
+    opacity: 0.8;
+}
+
+.backpage{
+    position: absolute;
+    top: 760px;
+    left: 675px;
+}
+
+.backpage a{
+    text-decoration: none;
+    color: red;
+    font-size: small;
+}
+
+.backpage a:hover, .forgotpass a:hover{
+    color: rgb(43, 151, 44);
+}
+
+.backpage a:active, .forgotpass a:active{
+    opacity: 0.8;
+}
+
+.forgotpass{
+    margin-bottom: 10px;
+}
+
+.forgotpass a{
+    color: red;
+    text-decoration: none;
+}
+
+.password{
+    position: relative;
+    width: 85%;
+    margin: 0 auto 15px;
+}
+
+.password input{
+    width: 100%;
+    padding: 12px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: larger;
+    outline: none;
+}
+
+.password input:focus{
+    border: 1px solid rgb(37, 99, 235);
+}
+
+.toggle_password{
+    position: absolute;
+    right: 12px;
+    top: -8px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    user-select: none;
+}
+
+/* Tablet Devices */
+@media (max-width: 768px){
+
+    .main{
+        padding: 30px 20px;
+    }
+
+    .login_card{
+        width: 60%;
+        max-width: 500px;
+        padding: 15px;
+    }
+
+    .login_card img{
+        width: 100px;
+        max-width: 25%;
+        height: auto;
+    }
+
+    .userinput > h2{
+        margin-left: 0;
+        justify-content: center;
+        margin-top: 35px;
+        font-size: 24px;
+    }
+
+    .userinput input{
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .password{
+        width: 90%;
+    }
+
+    .password input{
+        width: 100%;
+    }
+
+    .clicker button{
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .forgotpass{
+        font-size: 14px;
+    }
+
+    .backpage{
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+}
+
+/* Mobile Devices */
+@media (max-width: 600px){
+
+    .main{
+        min-height: 100vh;
+        padding: 20px 15px;
+        flex-direction: column;
+    }
+
+    .login_card{
+        width: 90%;
+        max-width: 400px;
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+
+    .login_card img{
+        width: 80px;
+        max-width: 25%;
+        height: auto;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .login_card h2{
+        font-size: 21px;
+    }
+
+    .login_card h4{
+        font-size: 13px;
+        margin-top: 7px;
+    }
+
+    .userinput > h2{
+        margin-left: 0;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .userinput input{
+        width: 90%;
+        padding: 11px;
+        font-size: 14px;
+    }
+
+    .password{
+        width: 90%;
+    }
+
+    .password input{
+        width: 100%;
+        padding: 11px;
+        padding-right: 40px;
+        font-size: 14px;
+    }
+
+    .password .toggle_password{
+        width: 18px;
+        height: 18px;
+        max-width: 18px;
+        max-height: 18px;
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: -4px;
+        object-fit: contain;
+    }
+
+    .clicker{
+        margin-bottom: 15px;
+    }
+
+    .clicker button{
+        width: 90%;
+        padding: 11px;
+        font-size: 14px;
+    }
+
+    .forgotpass{
+        margin-bottom: 5px;
+    }
+
+    .forgotpass a{
+        font-size: 13px;
+    }
+
+    .backpage{
+        position: static;
+        margin-top: 18px;
+        text-align: center;
+    }
+
+    .backpage a{
+        font-size: 13px;
+    }
+
+}
+
+/* Small Mobile Devices */
+@media (max-width: 380px){
+
+    .main{
+        padding: 15px 10px;
+    }
+
+    .login_card{
+        width: 92%;
+        max-width: 350px;
+        padding: 18px 12px;
+    }
+
+    .login_card img{
+        width: 65px;
+        max-width: 23%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .login_card h2{
+        font-size: 19px;
+    }
+
+    .login_card h4{
+        font-size: 12px;
+    }
+
+    .userinput > h2{
+        margin-top: 25px;
+        margin-bottom: 12px;
+        font-size: 18px;
+    }
+
+    .userinput input{
+        width: 92%;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .password{
+        width: 92%;
+    }
+
+    .password input{
+        width: 100%;
+        padding: 10px;
+        padding-right: 38px;
+        font-size: 13px;
+    }
+
+    .password .toggle_password{
+        width: 18px;
+        height: 18px;
+        max-width: 18px;
+        max-height: 18px;
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: -4px;
+        object-fit: contain;
+    }
+
+    .clicker button{
+        width: 92%;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .forgotpass a{
+        font-size: 12px;
+    }
+
+    .backpage{
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .backpage a{
+        font-size: 12px;
+    }
+
+}
