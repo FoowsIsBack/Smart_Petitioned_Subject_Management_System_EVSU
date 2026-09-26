@@ -51,22 +51,22 @@
                 </div>
                 <nav class="sidebar_nav">
                     <button class="dashboard">Dashboard</button>
-                    <button>Petition Management</button>
-                    <button>User Management </button>
-                    <button>Subject Management</button>
-                    <button>Workflow Monitoring</button>
-                    <button>Reports & Analytics </button>
-                    <button>System Logs</button>
-                    <button>System Settings</button>
+                    <button onclick="adminPmanagement()">Petition Management</button>
+                    <button onclick="adminUmanagement()">User Management </button>
+                    <button onclick="adminSmanagement()">Subject Management</button>
+                    <button onclick="adminWorkflow()">Workflow Monitoring</button>
+                    <button onclick="adminReports()">Reports & Analytics </button>
+                    <button onclick="adminLogs()">System Logs</button>
+                    <button onclick="adminSettings()">System Settings</button>
                 </nav>
             </aside>
             <main class="content">
                 <div class="admin_welcome">
                     <h3>Dashboard</h3>
-                    <p>System overview and petition monitoring.</p>
+                    <p>Overview of petition activities and system operations.</p>
                 </div>
                 <div class="dashboard_cards">
-
+                    
                 </div>
             </main>
         </div>
