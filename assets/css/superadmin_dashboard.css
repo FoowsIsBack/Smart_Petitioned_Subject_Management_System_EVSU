@@ -337,3 +337,88 @@ body{
     display: flex;
     gap: 40px;
 }
+
+.card1, .card2, .card3, .card4, .card5{
+    position: relative;
+    width: 30%;
+    padding: 20px;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card1{
+    background-color: rgb(250, 235, 235);
+    border-left: 4px solid rgb(139, 18, 16);
+}
+
+.card2{
+    background-color: rgb(235, 242, 250);
+    border-left: 4px solid rgb(45, 90, 150);
+}
+
+.card3{
+    background-color: rgb(235, 247, 240);
+    border-left: 4px solid rgb(50, 120, 80);
+}
+
+.card4{
+    background-color: rgb(252, 247, 230);
+    border-left: 4px solid rgb(200, 150, 30);
+}
+
+.card5{
+    background-color: rgb(242, 238, 250);
+    border-left: 4px solid rgb(100, 80, 140);
+}
+
+.card1 p, .card2 p, .card3 p, .card4 p, .card5 p{
+    margin: 0;
+    color: rgb(80, 80, 80);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card1 h3, .card2 h3, .card3 h3, .card4 h3, .card5 h3{
+    margin-top: 8px;
+    color: rgb(40, 40, 40);
+    font-size: 28px;
+}
+
+.card_icon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.card_icon svg{
+    width: 27px;
+    height: 27px;
+}
+
+.card1 .card_icon{
+    color: rgb(139, 18, 16);
+}
+
+.card2 .card_icon{
+    color: rgb(45, 90, 150);
+}
+
+.card3 .card_icon{
+    color: rgb(50, 120, 80);
+}
+
+.card4 .card_icon{
+    color: rgb(180, 130, 20);
+}
+
+.card5 .card_icon{
+    color: rgb(100, 80, 140);
+}
+
