@@ -676,7 +676,6 @@ body{
     line-height: 1.6;
 }
 
-
 .readme1 strong{
     color: rgb(50, 50, 50);
 }
@@ -695,4 +694,248 @@ body{
 
 .readme2 li:last-child{
     margin-bottom: 0;
+}
+
+@media (max-width: 900px){
+
+    .main2 header{
+        padding: 15px 25px;
+    }
+
+    .main_content{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgb(194, 194, 194);
+        padding: 15px;
+    }
+
+    .sidebar_header{
+        display: none;
+    }
+
+    .sidebar_nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 5px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        scrollbar-width: thin;
+    }
+
+    .sidebar_nav button{
+        flex: 0 0 auto;
+        width: auto;
+        min-width: max-content;
+        white-space: nowrap;
+    }
+
+    .content{
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .apply_form{
+        grid-template-columns: 1fr;
+    }
+
+    .readme{
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 700px){
+
+    .main2 header{
+        padding: 12px 15px;
+    }
+
+    .brand p{
+        font-size: 13px;
+    }
+
+    .brand img{
+        width: 45px;
+    }
+
+    .student_profile{
+        gap: 5px;
+    }
+
+    .student_container p{
+        font-size: 13px;
+    }
+
+    .main_content{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgb(194, 194, 194);
+        padding: 15px;
+    }
+
+    .sidebar_header{
+        display: none;
+    }
+
+    .sidebar_nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 5px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        scrollbar-width: thin;
+    }
+
+    .sidebar_nav button{
+        flex: 0 0 auto;
+        width: auto;
+        min-width: max-content;
+        white-space: nowrap;
+    }
+
+    .content{
+        margin-left: 0;
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .content_title{
+        margin-top: 10px;
+    }
+
+    .content_title h3{
+        font-size: 1.6rem;
+    }
+
+    .dashboard_cards{
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .step{
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .semester_options{
+        gap: 8px;
+    }
+
+    .semester_option span{
+        min-width: 120px;
+        padding: 10px 14px;
+    }
+
+    .grade_options{
+        gap: 8px;
+    }
+
+    .grade_option span{
+        min-width: 60px;
+        padding: 10px 14px;
+    }
+
+    .step3 .file-dropzone{
+        padding: 25px 12px;
+    }
+
+    .readme1, .readme2{
+        padding: 15px;
+    }
+
+    .readme1 p, .readme2 li{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .brand p{
+        font-size: 11px;
+        margin-left: 8px;
+    }
+
+    .brand img{
+        width: 42px;
+    }
+
+    .student_container p{
+        font-size: 12px;
+    }
+
+    .dropdown_arrow{
+        font-size: 16px;
+    }
+
+    .notification_dropdown{
+        position: fixed;
+        top: 70px;
+        right: 10px;
+        width: calc(100vw - 20px);
+    }
+
+    .profile_dropdown{
+        position: fixed;
+        top: 70px;
+        right: 10px;
+        width: calc(100vw - 20px);
+    }
+
+    .sidebar_nav{
+        padding-bottom: 3px;
+    }
+
+    .sidebar_nav button{
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .content{
+        padding: 15px 12px;
+    }
+
+    .content_title h3{
+        font-size: 1.4rem;
+    }
+
+    .content_title p{
+        font-size: 13px;
+    }
+
+    .step{
+        padding: 12px;
+    }
+
+    .semester_option span{
+        min-width: 100px;
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    .grade_option span{
+        min-width: 55px;
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
 }
