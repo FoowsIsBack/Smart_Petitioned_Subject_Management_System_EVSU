@@ -503,3 +503,233 @@ td{
     font-weight: 400;
     background-color: rgb(252, 252, 252);
 }
+
+@media (max-width: 900px){
+
+    .main2 header{
+        padding: 15px 25px;
+    }
+
+    .sidebar{
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgb(194, 194, 194);
+        padding: 15px;
+    }
+
+    .sidebar_header{
+        display: none;
+    }
+
+    .sidebar_nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 5px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        scrollbar-width: thin;
+    }
+
+    .sidebar_nav button{
+        flex: 0 0 auto;
+        width: auto;
+        min-width: max-content;
+        padding: 12px 15px;
+        white-space: nowrap;
+    }
+
+    .content{
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 700px){
+
+    .main2 header{
+        padding: 12px 15px;
+    }
+
+    .brand p{
+        font-size: 13px;
+    }
+
+    .brand img{
+        width: 45px;
+    }
+
+    .student_profile{
+        gap: 5px;
+    }
+
+    .student_container p{
+        font-size: 13px;
+    }
+
+    .main_content{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgb(194, 194, 194);
+        padding: 15px;
+    }
+
+    .sidebar_header{
+        display: none;
+    }
+
+    .sidebar_nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        scrollbar-width: thin;
+    }
+
+    .sidebar_nav button{
+        flex: 0 0 auto;
+        width: auto;
+        min-width: max-content;
+        height: 42px;
+        padding: 0 15px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar_nav button.payment{
+        border-left: 4px solid gold;
+        background-color: rgb(162, 38, 36);
+        color: white;
+        box-sizing: border-box;
+        text-indent: -4px;
+    }
+
+    .content{
+        margin-left: 0;
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .payment_head{
+        margin-top: 10px;
+    }
+
+    .payment_head h3{
+        font-size: 1.6rem;
+    }
+
+    .payment_card{
+        margin-top: 20px;
+    }
+
+    .payment_card_header{
+        padding: 18px 20px;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .brand p{
+        font-size: 11px;
+        margin-left: 8px;
+    }
+
+    .brand img{
+        width: 42px;
+    }
+
+    .student_container p{
+        font-size: 12px;
+    }
+
+    .dropdown_arrow{
+        font-size: 16px;
+    }
+
+    .notification_dropdown{
+        position: fixed;
+        top: 70px;
+        right: 10px;
+        width: calc(100vw - 20px);
+    }
+
+    .profile_dropdown{
+        position: fixed;
+        top: 70px;
+        right: 10px;
+        width: calc(100vw - 20px);
+    }
+
+    .sidebar_nav{
+        padding-bottom: 3px;
+    }
+
+    .sidebar_nav button{
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .content{
+        padding: 15px 12px;
+    }
+
+    .payment_head h3{
+        font-size: 1.4rem;
+    }
+
+    .payment_head p{
+        font-size: 13px;
+    }
+
+    .payment_card_header{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 16px;
+    }
+
+    .header_left h4{
+        font-size: 16px;
+    }
+
+    .header_left p{
+        font-size: 13px;
+    }
+
+    .header_right{
+        align-items: flex-start;
+    }
+
+    .outstanding_amount{
+        font-size: 24px;
+    }
+
+    .table_container{
+        overflow-x: auto;
+    }
+
+    table{
+        min-width: 850px;
+    }
+
+}
