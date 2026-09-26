@@ -305,6 +305,7 @@ body{
 }
 
 .content{
+    margin-left: 30px;
     flex: 1;
     background-color: rgb(248, 248, 248);
     padding: 25px;
@@ -316,4 +317,382 @@ body{
     color: white;
     box-sizing: border-box;
     text-indent: -4px;
+}
+
+.apply_form{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.step{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.semester_options{
+    display: flex;
+    gap: 12px;
+    margin: 12px 0 20px;
+    flex-wrap: wrap;
+}
+
+.semester_option{
+    position: relative;
+    cursor: pointer;
+}
+
+.semester_option input{
+    position: absolute;
+    opacity: 0;
+}
+
+.semester_option span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    padding: 12px 18px;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 8px;
+    background: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.semester_option input:checked + span{
+    background: rgb(139, 18, 16);
+    border-color: rgb(139, 18, 16);
+    color: rgb(255, 255, 255);
+}
+
+.semester_option:hover span{
+    border-color: rgb(139, 18, 16);
+}
+
+.step1 select:disabled{
+    background: rgb(245, 245, 245);
+    color: rgb(153, 153, 153);
+    cursor: not-allowed;
+}
+
+#subject{
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 8px;
+    background: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+}
+
+#subject:focus{
+    border-color: rgb(139, 18, 16);
+    box-shadow: 0 0 0 3px rgba(139, 18, 16, 0.1);
+}
+
+#subject:hover{
+    border-color: rgb(139, 18, 16);
+}
+
+#subject option{
+    padding: 10px;
+    color: rgb(51, 51, 51);
+    background: rgb(255, 255, 255);
+}
+
+#subject option:first-child{
+    color: rgb(136, 136, 136);
+}
+
+.content_title{
+    margin-top: 2%;
+}
+
+.content_title h3{
+    font-size: 2rem;
+}
+
+.content_title p{
+    margin-top: 5px;
+    color: gray;
+}
+
+.step1 h4, .step2 h4, .step3 h4, .step4 h4{
+    color: rgb(139, 18, 16);
+    font-weight: normal;
+}
+
+.step1 label, .step1 p, .step2 p, .step3 p{
+    display: block;
+    margin-bottom: 12px;
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+}
+
+.step2, .step3, .step4{
+    margin-top: 24px;
+}
+
+.step1 p, .step2 p{
+    margin-top: 8px;
+}
+
+.step3 .file-dropzone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    background-color: rgb(252, 252, 252);
+    border: 1px dashed rgb(156, 156, 156);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+.step3 .file-dropzone:hover{
+    border-color: rgb(139, 18, 16);
+    background-color: rgba(139, 18, 16, 0.099);
+}
+
+.step3 .file-dropzone svg{
+    color: rgb(102, 102, 102);
+    margin-bottom: 12px;
+}
+
+.step3 .upload-title{
+    color: rgb(51, 51, 51);
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.step3 .upload-subtitle{
+    color: rgb(136, 136, 136);
+    font-size: 13px;
+}
+
+.step3 .file-dropzone input[type="file"]{
+    display: none;
+}
+
+.grade_options{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.grade_option{
+    position: relative;
+    cursor: pointer;
+}
+
+.grade_option input{
+    position: absolute;
+    opacity: 0;
+}
+
+.grade_option span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    padding: 12px 18px;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 8px;
+    background: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.grade_option input:checked + span{
+    background: rgb(139, 18, 16);
+    border-color: rgb(139, 18, 16);
+    color: rgb(255, 255, 255);
+}
+
+.grade_option:hover span{
+    border-color: rgb(139, 18, 16);
+}
+
+.ocr_result{
+    display: none;
+    margin-top: 16px;
+    padding: 18px;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 8px;
+    background: rgb(250, 250, 250);
+}
+
+.ocr_result.show{
+    display: block;
+}
+
+.grade_result{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.grade_result:last-of-type{
+    border-bottom: none;
+}
+
+.grade_result span{
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+}
+
+.grade_result strong{
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ocr_verified{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    color: rgb(39, 120, 67);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.ocr_verified svg{
+    color: rgb(39, 120, 67);
+    flex-shrink: 0;
+}
+
+.ocr_status{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 8px;
+    background: rgb(250, 250, 250);
+    margin-top: 16px;
+}
+
+.ocr_icon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgb(241, 241, 241);
+    color: rgb(119, 119, 119);
+    flex-shrink: 0;
+}
+
+.ocr_text{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.ocr_text strong{
+    font-size: 14px;
+    color: rgb(85, 85, 85);
+}
+
+.ocr_text span{
+    font-size: 13px;
+    color: rgb(136, 136, 136);
+}
+
+.submit_petition{
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: rgb(139, 18, 16);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit_petition:disabled{
+    background: rgb(213, 213, 213);
+    color: rgb(153, 153, 153);
+    cursor: not-allowed;
+}
+
+.readme{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.readme1, .readme2{
+    padding: 20px;
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.readme1{
+    background-color: rgb(238,245,252);
+    border-left: 4px solid rgb(55,105,150);
+}
+
+.readme2{
+    background-color: rgb(255,248,232);
+    border-left: 4px solid rgb(181,137,38);
+}
+
+.readme1 h4, .readme2 h4{
+    margin-bottom: 12px;
+    color: rgb(139, 18, 16);
+    font-size: 16px;
+}
+
+.readme1 p{
+    margin: 0;
+    color: rgb(85, 85, 85);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+.readme1 strong{
+    color: rgb(50, 50, 50);
+}
+
+.readme2 ul{
+    margin: 0;
+    padding-left: 20px;
+}
+
+.readme2 li{
+    margin-bottom: 10px;
+    color: rgb(85, 85, 85);
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.readme2 li:last-child{
+    margin-bottom: 0;
 }
