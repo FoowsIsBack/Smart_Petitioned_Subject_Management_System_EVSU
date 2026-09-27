@@ -62,7 +62,7 @@
                             <button type="button" onclick="adminRejected()">Rejected Petitions</button>
                         </div>
                     </div>
-                    <button type="button" onclick="adminUmanagement()">User Managemen</button>
+                    <button type="button" onclick="adminUmanagement()">User Management</button>
                     <button type="button" onclick="adminSmanagement()">Subject Managemen</button>
                     <button type="button" onclick="adminWorkflow()">Workflow Monitorin</button>
                     <button type="button" onclick="adminReports()">Reports & Analytic</button>
@@ -81,7 +81,7 @@
                         <input type="text" placeholder="Search Petition...">
                     </div>
                     <button type="button" class="refresh_button">
-                        <i class="fa-solid fa-rotate-right"></i>Refresh</button>
+                        <i class="fa-solid fa-rotate-right"></i> Refresh</button>
                 </div>
                 <div class="petition_table_container">
                     <table class="petition_table">
@@ -152,5 +152,7 @@
     
     <script src="/assets/js/nextpage.js"></script>
     <script src="/assets/js/admin_dropdown.js"></script>
+    <script src="/assets/js/refresh.js"></script>
+    
 </body>
 </html>
