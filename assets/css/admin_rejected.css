@@ -395,3 +395,674 @@ body{
     box-sizing: border-box;
     text-indent: -4px;
 }
+
+.petition_toolbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.petition_search{
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 42px;
+    padding: 0 14px;
+    background-color: white;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 6px;
+}
+
+.petition_search i{
+    color: gray;
+    font-size: 14px;
+}
+
+.petition_search input{
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: rgb(60, 60, 60);
+}
+
+.refresh_button{
+    height: 42px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(139, 18, 16);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.refresh_button:hover{
+    background-color: rgb(162, 38, 36);
+}
+
+.refresh_button:active{
+    opacity: 0.7;
+}
+
+.petition_table_container{
+    margin-top: 20px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.petition_table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.petition_table th{
+    padding: 14px 15px;
+    background-color: rgb(246, 242, 242);
+    border-bottom: 1px solid rgba(156, 156, 156, 0.462);
+    color: black;
+    text-align: left;
+    font-size: 15px;
+}
+
+.petition_table td{
+    padding: 14px 15px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    color: rgb(60, 60, 60);
+    font-size: 13px;
+}
+
+.petition_table tbody tr:hover{
+    background-color: rgb(250, 250, 250);
+}
+
+.petition_table tbody tr:last-child td{
+    border-bottom: none;
+}
+
+.status{
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.status.pending{
+    background-color: rgb(255, 243, 205);
+    color: rgb(140, 100, 0);
+}
+
+.status.review{
+    background-color: rgb(225, 235, 255);
+    color: rgb(45, 85, 150);
+}
+
+.status.approved{
+    background-color: rgb(220, 245, 225);
+    color: rgb(35, 110, 55);
+}
+
+.view_button{
+    padding: 7px 14px;
+    border: 1px solid rgb(139, 18, 16);
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(139, 18, 16);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.view_button:hover{
+    background-color: rgb(139, 18, 16);
+    color: white;
+}
+
+.no_petitions{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    text-align: center;
+}
+
+.no_petitions i{
+    margin-bottom: 12px;
+    color: rgb(170, 170, 170);
+    font-size: 42px;
+}
+
+.no_petitions h4{
+    color: rgb(70, 70, 70);
+    font-size: 18px;
+}
+
+.no_petitions p{
+    margin-top: 6px;
+    color: gray;
+    font-size: 13px;
+}
+
+@media (max-width: 900px) {
+
+    .main2 header{
+        padding: 15px 25px;
+    }
+
+    .main_content{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgb(194, 194, 194);
+        padding: 15px;
+    }
+
+    .sidebar_header{
+        display: none;
+    }
+
+    .sidebar_nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        scrollbar-width: thin;
+    }
+
+    .sidebar_nav > button{
+        flex: 0 0 auto;
+        width: auto;
+        min-width: max-content;
+        height: 42px;
+        padding: 0 15px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar_dropdown{
+        flex: 0 0 auto;
+        width: auto;
+        position: static;
+    }
+
+    .sidebar_dropdown > button{
+        width: auto;
+        min-width: max-content;
+        height: 42px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        white-space: nowrap;
+    }
+
+    .sidebar_dropdown > button.dashboard{
+        border-left: 4px solid gold;
+        background-color: rgb(162, 38, 36);
+        color: white;
+        box-sizing: border-box;
+        text-indent: 0;
+    }
+
+    .sidebar_dropdown_menu{
+        position: fixed;
+        display: none;
+        flex-direction: column;
+        width: 220px;
+        padding: 5px;
+        background-color: white;
+        border: 1px solid rgb(210, 210, 210);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 9999;
+        overflow: visible;
+    }
+
+    .sidebar_dropdown_menu.show{
+        display: flex;
+    }
+
+    .sidebar_dropdown_menu button{
+        width: 100%;
+        min-width: 0;
+        height: 40px;
+        padding: 0 12px;
+        border: none;
+        border-radius: 6px;
+        background-color: transparent;
+        color: rgb(60, 60, 60);
+        text-align: left;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: pointer;
+    }
+
+    .sidebar_dropdown_menu button:hover{
+        background-color: rgb(162, 38, 36);
+        color: white;
+    }
+
+    .sidebar_dropdown_menu button.all_petitions{
+        border-left: 4px solid gold;
+        background-color: rgb(162, 38, 36);
+        color: white;
+        box-sizing: border-box;
+        text-indent: -4px;
+    }
+
+    .content{
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .petition_toolbar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .petition_search{
+        display: flex;
+        flex: 1;
+        width: auto;
+        max-width: none;
+        min-width: 0;
+        height: 42px;
+    }
+
+    .petition_search input{
+        width: 100%;
+        min-width: 0;
+    }
+
+    .refresh_button{
+        flex: 0 0 auto;
+        height: 42px;
+        padding: 0 18px;
+        white-space: nowrap;
+    }
+
+    .petition_table_container{
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .petition_table{
+        min-width: 750px;
+    }
+}
+
+@media (max-width: 700px){
+
+    .main2 header{
+        padding: 12px 15px;
+    }
+
+    .brand p{
+        font-size: 13px;
+    }
+
+    .brand img{
+        width: 45px;
+    }
+
+    .student_profile{
+        gap: 5px;
+    }
+
+    .student_container p{
+        font-size: 13px;
+    }
+
+    .main_content{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgb(194, 194, 194);
+        padding: 15px;
+    }
+
+    .sidebar_header{
+        display: none;
+    }
+
+    .sidebar_nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        scrollbar-width: thin;
+    }
+
+    .sidebar_nav > button{
+        flex: 0 0 auto;
+        width: auto;
+        min-width: max-content;
+        height: 42px;
+        padding: 0 15px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+    }
+
+    .sidebar_dropdown{
+        flex: 0 0 auto;
+        width: auto;
+        position: static;
+    }
+
+    .sidebar_dropdown > button{
+        width: auto;
+        min-width: max-content;
+        height: 42px;
+        padding: 0 15px;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .sidebar_dropdown > button.dashboard{
+        border-left: 4px solid gold;
+        background-color: rgb(162, 38, 36);
+        color: white;
+        box-sizing: border-box;
+        text-indent: 0;
+    }
+
+    .sidebar_dropdown_menu{
+        width: 220px;
+    }
+
+    .sidebar_dropdown_menu button{
+        height: 40px;
+        padding: 0 12px;
+        font-size: 13px;
+    }
+
+    .content{
+        margin-left: 0;
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .admin_welcome{
+        margin-top: 10px;
+    }
+
+    .admin_welcome h3{
+        font-size: 1.6rem;
+    }
+
+    .petition_toolbar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .petition_search{
+        flex: 1;
+        width: auto;
+        max-width: none;
+        min-width: 0;
+        height: 42px;
+    }
+
+    .petition_search i{
+        flex: 0 0 auto;
+    }
+
+    .petition_search input{
+        width: 100%;
+        min-width: 0;
+        font-size: 13px;
+    }
+
+    .refresh_button{
+        flex: 0 0 auto;
+        width: auto;
+        height: 42px;
+        padding: 0 14px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .petition_table_container{
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .petition_table{
+        min-width: 750px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .main2 header{
+        padding: 12px;
+    }
+
+    .brand p{
+        font-size: 11px;
+        margin-left: 8px;
+    }
+
+    .brand img{
+        width: 42px;
+    }
+
+    .student_container p{
+        font-size: 12px;
+    }
+
+    .dropdown_arrow{
+        font-size: 16px;
+    }
+
+    .notification_dropdown{
+        position: fixed;
+        top: 70px;
+        right: 10px;
+        width: calc(100vw - 20px);
+    }
+
+    .profile_dropdown{
+        position: fixed;
+        top: 70px;
+        right: 10px;
+        width: calc(100vw - 20px);
+    }
+
+    .sidebar{
+        padding: 12px;
+    }
+
+    .sidebar_nav{
+        gap: 5px;
+        padding-bottom: 3px;
+    }
+
+    .sidebar_nav > button{
+        height: 42px;
+        min-height: 42px;
+        padding: 0 15px;
+        font-size: 13px;
+    }
+
+    .sidebar_dropdown{
+        flex: 0 0 auto;
+        width: auto;
+        position: static;
+    }
+
+    .sidebar_dropdown > button{
+        width: auto;
+        min-width: max-content;
+        height: 42px;
+        padding: 0 15px;
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    .sidebar_dropdown > button.dashboard{
+        border-left: 4px solid gold;
+        background-color: rgb(162, 38, 36);
+        color: white;
+        box-sizing: border-box;
+        text-indent: 0;
+    }
+
+    .sidebar_dropdown_menu{
+        width: 210px;
+        padding: 5px;
+    }
+
+    .sidebar_dropdown_menu button{
+        width: 100%;
+        height: 38px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .content{
+        padding: 15px 12px;
+    }
+
+    .admin_welcome h3{
+        font-size: 1.4rem;
+    }
+
+    .admin_welcome p{
+        font-size: 13px;
+    }
+
+    .petition_toolbar{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .petition_search{
+        display: flex;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        height: 42px;
+        flex: none;
+    }
+
+    .petition_search i{
+        flex: 0 0 auto;
+        font-size: 13px;
+    }
+
+    .petition_search input{
+        width: 100%;
+        min-width: 0;
+        margin-left: 8px;
+        font-size: 13px;
+    }
+
+    .petition_search input::placeholder{
+        font-size: 13px;
+    }
+
+    .refresh_button{
+        width: 100%;
+        height: 42px;
+        padding: 0 15px;
+        font-size: 13px;
+    }
+
+    .petition_table_container{
+        width: 100%;
+        margin-top: 15px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .petition_table{
+        min-width: 700px;
+    }
+
+    .petition_table th{
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .petition_table td{
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .view_button{
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+
+    .no_petitions{
+        min-height: 220px;
+        padding: 20px;
+    }
+
+    .no_petitions i{
+        font-size: 36px;
+    }
+
+    .no_petitions h4{
+        font-size: 16px;
+    }
+
+    .no_petitions p{
+        font-size: 12px;
+    }
+}
