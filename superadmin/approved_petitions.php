@@ -9,7 +9,6 @@
     <title>Super Admin Petition Management - EVSU Petition Portal</title>
 </head>
 <body>
-
     <div class="main">
         <div class="main2">
             <header>
@@ -49,35 +48,80 @@
                 <div class="sidebar_header">
                     <h3>SUPER ADMIN</h3>
                 </div>
-                    <nav class="sidebar_nav">
-                        <button type="button" onclick="adminDashboard()">Dashboard</button>
-                        <div class="sidebar_dropdown">
-                            <button type="button" class="dashboard" id="petitionManagementButton">
-                                <span>Petition Management</span>
-                                <span class="dropdown_arrow">⌄</span>
-                            </button>
-                            <div class="sidebar_dropdown_menu" id="petitionManagementMenu">
-                                <button type="button" onclick="adminPmanagement()">All Petitions</button>
-                                <button type="button" onclick="adminPending()">Pending Petitions</button>
-                                <button type="button" class="all_petitions">Approved Petitions</button>
-                                <button type="button" onclick="adminRejected()">Rejected Petitions</button>
-                            </div>
+                <nav class="sidebar_nav">
+                    <button type="button" onclick="adminDashboard()">Dashboard</button>
+                    <div class="sidebar_dropdown open">
+                        <button type="button" class="dashboard" id="petitionManagementButton">
+                            <span>Petition Management</span>
+                            <span class="dropdown_arrow">⌄</span>
+                        </button>
+                        <div class="sidebar_dropdown_menu show" id="petitionManagementMenu">
+                            <button type="button" onclick="adminPmanagement()">All Petitions</button>
+                            <button type="button" onclick="adminPending()">Pending Petitions</button>
+                            <button type="button" class="all_petitions">Approved Petitions</button>
+                            <button type="button" onclick="adminRejected()">Rejected Petitions</button>
                         </div>
-                        <button type="button" onclick="adminUmanagement()">User Management</button>
-                        <button type="button" onclick="adminSmanagement()">Subject Management</button>
-                        <button type="button" onclick="adminWorkflow()">Workflow Monitoring</button>
-                        <button type="button" onclick="adminReports()">Reports & Analytics</button>
-                        <button type="button" onclick="adminLogs()">System Logs</button>
-                        <button type="button" onclick="adminSettings()">System Settings</button>
-                    </nav>
+                    </div>
+                    <button type="button" onclick="adminUmanagement()">User Management</button>
+                    <button type="button" onclick="adminSmanagement()">Subject Management</button>
+                    <button type="button" onclick="adminWorkflow()">Workflow Monitoring</button>
+                    <button type="button" onclick="adminReports()">Reports & Analytics</button>
+                    <button type="button" onclick="adminLogs()">System Logs</button>
+                    <button type="button" onclick="adminSettings()">System Settings</button>
+                </nav>
             </aside>
             <main class="content">
                 <div class="admin_welcome">
-                    <h3>Petition Management</h3>
-                    <p>View and manage all petition requests.</p>
+                    <h3>Approved Petitions</h3>
+                    <p>View petitions that completed the approval process.</p>
                 </div>
-                <div class="dashboard_cards">
-                    
+                <div class="petition_toolbar">
+                    <div class="petition_search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search Petition...">
+                    </div>
+                    <button type="button" class="refresh_button">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        Refresh
+                    </button>
+                </div>
+                <div class="petition_table_container">
+                    <table class="petition_table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Subject</th>
+                                <th>Student</th>
+                                <th>Program</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="petitionTableBody">
+                            <tr>
+                                <td>#00022</td>
+                                <td>IT 210</td>
+                                <td>Ana B.</td>
+                                <td>BSCS</td>
+                                <td>
+                                    <button type="button" class="view_button">View Petition</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#00018</td>
+                                <td>IT 311</td>
+                                <td>John C.</td>
+                                <td>BSIT</td>
+                                <td>
+                                    <button type="button" class="view_button">View Petition</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="no_petitions" id="noPetitions">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <h4>No approved petitions found</h4>
+                        <p>There are currently no petitions that completed the approval process.</p>
+                    </div>
                 </div>
             </main>
         </div>
@@ -85,6 +129,7 @@
 
     <script src="/assets/js/nextpage.js"></script>
     <script src="/assets/js/admin_dropdown.js"></script>
+    <script src="/assets/js/refresh.js"></script>
 
 </body>
 </html>
