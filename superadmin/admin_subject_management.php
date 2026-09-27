@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/assets/icons/evsu_logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/css/superadmin_dashboard.css">
+    <link rel="stylesheet" href="/assets/css/admin_subject.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <title>Super Admin Subject Management - EVSU Petition Portal</title>
 </head>
-<body>
 
+<body>
     <div class="main">
         <div class="main2">
             <header>
@@ -50,30 +50,133 @@
                     <h3>SUPER ADMIN</h3>
                 </div>
                 <nav class="sidebar_nav">
-                    <button onclick="adminDashboard()">Dashboard</button>
-                    <button onclick="adminPmanagement()">Petition Management</button>
-                    <button onclick="adminUmanagement()">User Management </button>
-                    <button class="dashboard">Subject Management</button>
-                    <button onclick="adminWorkflow()">Workflow Monitoring</button>
-                    <button onclick="adminReports()">Reports & Analytics </button>
-                    <button onclick="adminLogs()">System Logs</button>
-                    <button onclick="adminSettings()">System Settings</button>
+                    <button type="button" onclick="adminDashboard()">Dashboard</button>
+                    <button type="button" onclick="adminPmanagement()">Petition Management</button>
+                    <button type="button" onclick="adminUmanagement()">User Management</button>
+                    <button type="button" class="dashboard">Subject Management</button>
+                    <button type="button" onclick="adminWorkflow()">Workflow Monitoring</button>
+                    <button type="button" onclick="adminReports()">Reports & Analytics</button>
+                    <button type="button" onclick="adminLogs()">System Logs</button>
+                    <button type="button" onclick="adminSettings()">System Settings</button>
                 </nav>
             </aside>
             <main class="content">
                 <div class="admin_welcome">
                     <h3>Subject Management</h3>
-                    <p>Configure course offerings, subject codes, and capacity limits.</p>
+                    <p>Manage subjects available for petition and class formation.</p>
                 </div>
-                <div class="dashboard_cards">
-                    
+                <div class="petition_toolbar">
+                    <div class="petition_search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search Subject...">
+                    </div>
+                    <div class="user_actions">
+                        <button type="button" class="add_user_button"><i class="fa-solid fa-plus"></i> Add Subject</button>
+                        <button type="button" class="refresh_button"><i class="fa-solid fa-rotate-right"></i> Refresh</button>
+                    </div>
+                </div>
+                <div class="petition_table_container">
+                    <table class="petition_table">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Subject</th>
+                                <th>Units</th>
+                                <th>Program</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="subjectTableBody">
+                            <tr>
+                                <td>IT 311</td>
+                                <td>Information Systems</td>
+                                <td>3</td>
+                                <td>BSIT</td>
+                                <td><button type="button" class="view_button">Edit</button><button type="button" class="view_button">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>IT 305</td>
+                                <td>Web Development</td>
+                                <td>3</td>
+                                <td>BSIT</td>
+                                <td><button type="button" class="view_button">Edit</button><button type="button" class="view_button">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>IT 210</td>
+                                <td>Database Systems</td>
+                                <td>3</td>
+                                <td>BSIT</td>
+                                <td><button type="button" class="view_button">Edit</button><button type="button" class="view_button">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>IT 401</td>
+                                <td>Capstone Project</td>
+                                <td>3</td>
+                                <td>BSIT</td>
+                                <td><button type="button" class="view_button">Edit</button><button type="button" class="view_button">View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="no_petitions" id="noSubjects">
+                        <i class="fa-solid fa-book"></i>
+                        <h4>No subjects found</h4>
+                        <p>There are currently no subjects available.</p>
+                    </div>
+                </div>
+                <div class="petition_pagination">
+                    <p>Showing 1–10 of 87 subjects</p>
+                    <div class="pagination_buttons">
+                        <button type="button"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button type="button" class="active">1</button>
+                        <button type="button">2</button>
+                        <button type="button"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
                 </div>
             </main>
+            <div class="subject_modal" id="subjectModal">
+                <div class="subject_modal_content">
+                    <div class="subject_modal_header">
+                        <h3>Add Subject</h3>
+                        <button type="button" class="subject_modal_close" id="closeSubjectModal"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div class="subject_modal_body">
+                        <div class="subject_form_group">
+                            <label for="subjectCode">Subject Code</label>
+                            <input type="text" id="subjectCode" placeholder="e.g. IT 311">
+                        </div>
+                        <div class="subject_form_group">
+                            <label for="subjectName">Subject Name</label>
+                            <input type="text" id="subjectName" placeholder="e.g. Information Systems">
+                        </div>
+                        <div class="subject_form_row">
+                            <div class="subject_form_group">
+                                <label for="subjectUnits">Units</label>
+                                <input type="number" id="subjectUnits" placeholder="e.g. 3" min="1" max="6">
+                            </div>
+                            <div class="subject_form_group">
+                                <label for="subjectProgram">Program</label>
+                                <select id="subjectProgram">
+                                    <option value="">Select Program</option>
+                                    <option value="BSIT">BSIT</option>
+                                    <option value="BSCS">BSCS</option>
+                                    <option value="BSIS">BSIS</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subject_modal_footer">
+                        <button type="button" class="subject_cancel_button" id="cancelSubjectModal">Cancel</button>
+                        <button type="button" class="subject_save_button" id="saveSubject"><i class="fa-solid fa-plus"></i>Add Subject</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
+
     <script src="/assets/js/nextpage.js"></script>
     <script src="/assets/js/admin_dropdown.js"></script>
+    <script src="/assets/js/admin_subject.js"></script>
+    <script src="/assets/js/refresh.js"></script>
 
 </body>
 </html>
