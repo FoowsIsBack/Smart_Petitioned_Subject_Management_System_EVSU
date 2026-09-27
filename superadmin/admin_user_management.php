@@ -100,6 +100,8 @@
                                 <td>Accounting</td>
                                 <td>
                                     <button type="button" class="view_button">View</button>
+                                    <button type="button" class="view_button">Edit</button>
+                                    <button type="button" class="view_button">Delete</button>
                                 </td>
                             </tr>
                             <tr>
@@ -109,6 +111,8 @@
                                 <td>Department Head</td>
                                 <td>
                                     <button type="button" class="view_button">View</button>
+                                    <button type="button" class="view_button">Edit</button>
+                                    <button type="button" class="view_button">Delete</button>
                                 </td>
                             </tr>
                             <tr>
@@ -118,6 +122,8 @@
                                 <td>Faculty</td>
                                 <td>
                                     <button type="button" class="view_button">View</button>
+                                    <button type="button" class="view_button">Edit</button>
+                                    <button type="button" class="view_button">Delete</button>
                                 </td>
                             </tr>
                             <tr>
@@ -127,6 +133,8 @@
                                 <td>Admin</td>
                                 <td>
                                     <button type="button" class="view_button">View</button>
+                                    <button type="button" class="view_button">Edit</button>
+                                    <button type="button" class="view_button">Delete</button>
                                 </td>
                             </tr>
                         </tbody>
