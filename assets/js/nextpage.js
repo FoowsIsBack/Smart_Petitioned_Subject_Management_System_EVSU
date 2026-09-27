@@ -54,10 +54,6 @@ function adminLogs(){
     window.location.href = "/superadmin/admin_logs.php";
 }
 
-function adminSettings(){
-    window.location.href = "/superadmin/admin_settings.php";
-}
-
 function adminApproved(){
     window.location.href = "/superadmin/approved_petitions.php";
 }
