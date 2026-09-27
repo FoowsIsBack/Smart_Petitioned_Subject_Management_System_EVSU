@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <title>Super Admin Subject Management - EVSU Petition Portal</title>
 </head>
-
 <body>
     <div class="main">
         <div class="main2">
@@ -68,11 +67,15 @@
                 <div class="petition_toolbar">
                     <div class="petition_search">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Search Subject...">
+                        <input type="text" id="subjectSearch" placeholder="Search Subject...">
                     </div>
                     <div class="user_actions">
-                        <button type="button" class="add_user_button"><i class="fa-solid fa-plus"></i> Add Subject</button>
-                        <button type="button" class="refresh_button"><i class="fa-solid fa-rotate-right"></i> Refresh</button>
+                        <button type="button" class="add_user_button">
+                            <i class="fa-solid fa-plus"></i> Add Subject
+                        </button>
+                        <button type="button" class="refresh_button">
+                            <i class="fa-solid fa-rotate-right"></i> Refresh
+                        </button>
                     </div>
                 </div>
                 <div class="petition_table_container">
@@ -92,28 +95,44 @@
                                 <td>Information Systems</td>
                                 <td>3</td>
                                 <td>BSIT</td>
-                                <td><button type="button" class="view_button">Edit</button><button type="button" class="view_button">View</button></td>
+                                <td>
+                                    <button type="button" class="view_button edit_subject_button">Edit</button>
+                                    <button type="button" class="view_button view_subject_button">View</button>
+                                    <button type="button" class="view_button view_subject_button">Delete</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>IT 305</td>
                                 <td>Web Development</td>
                                 <td>3</td>
                                 <td>BSIT</td>
-                                <td><button type="button" class="view_button">Edit</button><button type="button" class="view_button">View</button></td>
+                                <td>
+                                    <button type="button" class="view_button edit_subject_button">Edit</button>
+                                    <button type="button" class="view_button view_subject_button">View</button>
+                                    <button type="button" class="view_button view_subject_button">Delete</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>IT 210</td>
                                 <td>Database Systems</td>
                                 <td>3</td>
                                 <td>BSIT</td>
-                                <td><button type="button" class="view_button">Edit</button><button type="button" class="view_button">View</button></td>
+                                <td>
+                                    <button type="button" class="view_button edit_subject_button">Edit</button>
+                                    <button type="button" class="view_button view_subject_button">View</button>
+                                    <button type="button" class="view_button view_subject_button">Delete</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>IT 401</td>
                                 <td>Capstone Project</td>
                                 <td>3</td>
                                 <td>BSIT</td>
-                                <td><button type="button" class="view_button">Edit</button><button type="button" class="view_button">View</button></td>
+                                <td>
+                                    <button type="button" class="view_button edit_subject_button">Edit</button>
+                                    <button type="button" class="view_button view_subject_button">View</button>
+                                    <button type="button" class="view_button view_subject_button">Delete</button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -124,12 +143,15 @@
                     </div>
                 </div>
                 <div class="petition_pagination">
-                    <p>Showing 1–10 of 87 subjects</p>
+                    <p id="paginationText">Showing 1–4 of 4 subjects</p>
                     <div class="pagination_buttons">
-                        <button type="button"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button type="button" id="previousPage">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
                         <button type="button" class="active">1</button>
-                        <button type="button">2</button>
-                        <button type="button"><i class="fa-solid fa-chevron-right"></i></button>
+                        <button type="button" id="nextPage">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </main>
@@ -137,7 +159,9 @@
                 <div class="subject_modal_content">
                     <div class="subject_modal_header">
                         <h3>Add Subject</h3>
-                        <button type="button" class="subject_modal_close" id="closeSubjectModal"><i class="fa-solid fa-xmark"></i></button>
+                        <button type="button" class="subject_modal_close" id="closeSubjectModal">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                     </div>
                     <div class="subject_modal_body">
                         <div class="subject_form_group">
@@ -166,7 +190,83 @@
                     </div>
                     <div class="subject_modal_footer">
                         <button type="button" class="subject_cancel_button" id="cancelSubjectModal">Cancel</button>
-                        <button type="button" class="subject_save_button" id="saveSubject"><i class="fa-solid fa-plus"></i>Add Subject</button>
+                        <button type="button" class="subject_save_button" id="saveSubject">
+                            <i class="fa-solid fa-plus"></i> Add Subject
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="subject_modal" id="editSubjectModal">
+                <div class="subject_modal_content">
+                    <div class="subject_modal_header">
+                        <h3>Edit Subject</h3>
+                        <button type="button" class="subject_modal_close" id="closeEditSubjectModal">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="subject_modal_body">
+                        <div class="subject_form_group">
+                            <label for="editSubjectCode">Subject Code</label>
+                            <input type="text" id="editSubjectCode" placeholder="e.g. IT 311">
+                        </div>
+                        <div class="subject_form_group">
+                            <label for="editSubjectName">Subject Name</label>
+                            <input type="text" id="editSubjectName" placeholder="e.g. Information Systems">
+                        </div>
+                        <div class="subject_form_row">
+                            <div class="subject_form_group">
+                                <label for="editSubjectUnits">Units</label>
+                                <input type="number" id="editSubjectUnits" placeholder="e.g. 3" min="1" max="6">
+                            </div>
+                            <div class="subject_form_group">
+                                <label for="editSubjectProgram">Program</label>
+                                <select id="editSubjectProgram">
+                                    <option value="">Select Program</option>
+                                    <option value="BSIT">BSIT</option>
+                                    <option value="BSCS">BSCS</option>
+                                    <option value="BSIS">BSIS</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subject_modal_footer">
+                        <button type="button" class="subject_cancel_button" id="cancelEditSubjectModal">Cancel</button>
+                        <button type="button" class="subject_save_button" id="updateSubject">
+                            <i class="fa-solid fa-floppy-disk"></i> Save Changes
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="subject_modal" id="viewSubjectModal">
+                <div class="subject_modal_content">
+                    <div class="subject_modal_header">
+                        <h3>Subject Details</h3>
+                        <button type="button" class="subject_modal_close" id="closeViewSubjectModal">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="subject_modal_body">
+                        <div class="subject_form_group">
+                            <label for="viewSubjectCode">Subject Code</label>
+                            <input type="text" id="viewSubjectCode" readonly>
+                        </div>
+                        <div class="subject_form_group">
+                            <label for="viewSubjectName">Subject Name</label>
+                            <input type="text" id="viewSubjectName" readonly>
+                        </div>
+                        <div class="subject_form_row">
+                            <div class="subject_form_group">
+                                <label for="viewSubjectUnits">Units</label>
+                                <input type="text" id="viewSubjectUnits" readonly>
+                            </div>
+                            <div class="subject_form_group">
+                                <label for="viewSubjectProgram">Program</label>
+                                <input type="text" id="viewSubjectProgram" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subject_modal_footer">
+                        <button type="button" class="subject_cancel_button" id="closeViewSubjectButton">Close</button>
                     </div>
                 </div>
             </div>
