@@ -9,7 +9,6 @@
     <title>Super Admin Petition Management - EVSU Petition Portal</title>
 </head>
 <body>
-
     <div class="main">
         <div class="main2">
             <header>
@@ -49,32 +48,32 @@
                 <div class="sidebar_header">
                     <h3>SUPER ADMIN</h3>
                 </div>
-                    <nav class="sidebar_nav">
-                        <button type="button" onclick="adminDashboard()">Dashboard</button>
-                        <div class="sidebar_dropdown">
-                            <button type="button" class="dashboard" id="petitionManagementButton">
-                                <span>Petition Management</span>
-                                <span class="dropdown_arrow">⌄</span>
-                            </button>
-                            <div class="sidebar_dropdown_menu" id="petitionManagementMenu">
-                                <button type="button" class="all_petitions">All Petitions</button>
-                                <button type="button" onclick="adminPending()">Pending Petitions</button>
-                                <button type="button" onclick="adminApproved()">Approved Petitions</button>
-                                <button type="button" onclick="adminRejected()">Rejected Petitions</button>
-                            </div>
+                <nav class="sidebar_nav">
+                    <button type="button" onclick="adminDashboard()">Dashboard</button>
+                    <div class="sidebar_dropdown">
+                        <button type="button" class="dashboard" id="petitionManagementButton">
+                            <span>Petition Management</span>
+                            <span class="dropdown_arrow">⌄</span>
+                        </button>
+                        <div class="sidebar_dropdown_menu" id="petitionManagementMenu">
+                            <button type="button" class="all_petitions">All Petitions</button>
+                            <button type="button" onclick="adminPending()">Pending Petitions</button>
+                            <button type="button" onclick="adminApproved()">Approved Petitions</button>
+                            <button type="button" onclick="adminRejected()">Rejected Petitions</button>
                         </div>
-                        <button type="button" onclick="adminUmanagement()">User Management</button>
-                        <button type="button" onclick="adminSmanagement()">Subject Management</button>
-                        <button type="button" onclick="adminWorkflow()">Workflow Monitoring</button>
-                        <button type="button" onclick="adminReports()">Reports & Analytics</button>
-                        <button type="button" onclick="adminLogs()">System Logs</button>
-                        <button type="button" onclick="adminSettings()">System Settings</button>
-                    </nav>
+                    </div>
+                    <button type="button" onclick="adminUmanagement()">User Managemen</button>
+                    <button type="button" onclick="adminSmanagement()">Subject Managemen</button>
+                    <button type="button" onclick="adminWorkflow()">Workflow Monitorin</button>
+                    <button type="button" onclick="adminReports()">Reports & Analytic</button>
+                    <button type="button" onclick="adminLogs()">System Logs</button>
+                    <button type="button" onclick="adminSettings()">System Setting</button>
+                </nav>
             </aside>
             <main class="content">
                 <div class="admin_welcome">
                     <h3>All Petitions</h3>
-                    <p>View and manage all student petitions.</p>
+                    <p>View and monitor all student petitions across the approval workflow.</p>
                 </div>
                 <div class="petition_toolbar">
                     <div class="petition_search">
@@ -82,9 +81,7 @@
                         <input type="text" placeholder="Search Petition...">
                     </div>
                     <button type="button" class="refresh_button">
-                        <i class="fa-solid fa-rotate-right"></i>
-                        Refresh
-                    </button>
+                        <i class="fa-solid fa-rotate-right"></i>Refresh</button>
                 </div>
                 <div class="petition_table_container">
                     <table class="petition_table">
@@ -94,6 +91,7 @@
                                 <th>Subject</th>
                                 <th>Student</th>
                                 <th>Program</th>
+                                <th>Current Stage</th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -104,24 +102,41 @@
                                 <td>IT 311</td>
                                 <td>Naruto Uzumaki</td>
                                 <td>BSIT</td>
-                                <td><span class="status pending">Pending</span></td>
-                                <td><button type="button" class="view_button">View</button></td>
+                                <td>Department Head</td>
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+                                <td>
+                                    <button type="button" class="view_button">View</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>#00023</td>
                                 <td>IT 305</td>
                                 <td>Sasuke Uchiha</td>
                                 <td>BSIT</td>
-                                <td><span class="status review">Review</span></td>
-                                <td><button type="button" class="view_button">View</button></td>
+                                <td>Assigned Faculty</td>
+                                <td>
+                                    <span class="status review">Review</span>
+                                </td>
+                                <td>
+                                    <button type="button" class="view_button">View</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>#00022</td>
                                 <td>IT 210</td>
                                 <td>Sakura Haruno</td>
                                 <td>BSCS</td>
-                                <td><span class="status approved">Approved</span></td>
-                                <td><button type="button" class="view_button">View</button></td>
+                                <td>Completed</td>
+                                <td>
+                                    <span class="status approved">Approved</span>
+                                </td>
+                                <td>
+                                    <button type="button" class="view_button">View</button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -134,9 +149,8 @@
             </main>
         </div>
     </div>
-
+    
     <script src="/assets/js/nextpage.js"></script>
     <script src="/assets/js/admin_dropdown.js"></script>
-
 </body>
 </html>
