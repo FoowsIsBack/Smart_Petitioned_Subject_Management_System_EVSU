@@ -57,3 +57,15 @@ function adminLogs(){
 function adminSettings(){
     window.location.href = "/superadmin/admin_settings.php";
 }
+
+function adminApproved(){
+    window.location.href = "/superadmin/approved_petitions.php";
+}
+
+function adminPending(){
+    window.location.href = "/superadmin/pending_petitions.php";
+}
+
+function adminRejected(){
+    window.location.href = "/superadmin/rejected_petitions.php";
+}
