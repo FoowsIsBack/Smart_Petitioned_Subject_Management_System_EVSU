@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/assets/icons/evsu_logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/css/superadmin_dashboard.css">
+    <link rel="stylesheet" href="/assets/css/superadmin_petition_management.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <title>Super Admin Petition Management - EVSU Petition Portal</title>
 </head>
@@ -49,21 +49,32 @@
                 <div class="sidebar_header">
                     <h3>SUPER ADMIN</h3>
                 </div>
-                <nav class="sidebar_nav">
-                    <button onclick="adminDashboard()">Dashboard</button>
-                    <button class="dashboard">Petition Management</button>
-                    <button onclick="adminUmanagement()">User Management </button>
-                    <button onclick="adminSmanagement()">Subject Management</button>
-                    <button onclick="adminWorkflow()">Workflow Monitoring</button>
-                    <button onclick="adminReports()">Reports & Analytics </button>
-                    <button onclick="adminLogs()">System Logs</button>
-                    <button onclick="adminSettings()">System Settings</button>
-                </nav>
+                    <nav class="sidebar_nav">
+                        <button type="button" onclick="adminDashboard()">Dashboard</button>
+                        <div class="sidebar_dropdown">
+                            <button type="button" class="dashboard" id="petitionManagementButton">
+                                <span>Petition Management</span>
+                                <span class="dropdown_arrow">⌄</span>
+                            </button>
+                            <div class="sidebar_dropdown_menu" id="petitionManagementMenu">
+                                <button type="button" class="all_petitions">All Petitions</button>
+                                <button type="button" onclick="adminPending()">Pending Petitions</button>
+                                <button type="button" onclick="adminApproved()">Approved Petitions</button>
+                                <button type="button" onclick="adminRejected()">Rejected Petitions</button>
+                            </div>
+                        </div>
+                        <button type="button" onclick="adminUmanagement()">User Management</button>
+                        <button type="button" onclick="adminSmanagement()">Subject Management</button>
+                        <button type="button" onclick="adminWorkflow()">Workflow Monitoring</button>
+                        <button type="button" onclick="adminReports()">Reports & Analytics</button>
+                        <button type="button" onclick="adminLogs()">System Logs</button>
+                        <button type="button" onclick="adminSettings()">System Settings</button>
+                    </nav>
             </aside>
             <main class="content">
                 <div class="admin_welcome">
                     <h3>Petition Management</h3>
-                    <p>Review, approve, and manage subject petition requests.</p>
+                    <p>View and manage all petition requests.</p>
                 </div>
                 <div class="dashboard_cards">
                     
@@ -71,7 +82,7 @@
             </main>
         </div>
     </div>
-    
+
     <script src="/assets/js/nextpage.js"></script>
     <script src="/assets/js/admin_dropdown.js"></script>
 
