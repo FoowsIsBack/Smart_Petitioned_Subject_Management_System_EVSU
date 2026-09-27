@@ -32,3 +32,17 @@ document.addEventListener("click", function() {
     profileDropdown.classList.remove("show");
     notificationDropdown.classList.remove("show");
 });
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const petitionManagementButton = document.getElementById("petitionManagementButton");
+    const petitionManagementMenu = document.getElementById("petitionManagementMenu");
+
+    petitionManagementMenu.classList.add("show");
+    petitionManagementButton.parentElement.classList.add("open");
+
+    petitionManagementButton.addEventListener("click", function(){
+        petitionManagementMenu.classList.toggle("show");
+        petitionManagementButton.parentElement.classList.toggle("open");
+    });
+});
