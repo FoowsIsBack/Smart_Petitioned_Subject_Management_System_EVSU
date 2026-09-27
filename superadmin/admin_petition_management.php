@@ -67,7 +67,6 @@
                     <button type="button" onclick="adminWorkflow()">Workflow Monitorin</button>
                     <button type="button" onclick="adminReports()">Reports & Analytic</button>
                     <button type="button" onclick="adminLogs()">System Logs</button>
-                    <button type="button" onclick="adminSettings()">System Setting</button>
                 </nav>
             </aside>
             <main class="content">
