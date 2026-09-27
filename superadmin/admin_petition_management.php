@@ -73,11 +73,63 @@
             </aside>
             <main class="content">
                 <div class="admin_welcome">
-                    <h3>Petition Management</h3>
-                    <p>View and manage all petition requests.</p>
+                    <h3>All Petitions</h3>
+                    <p>View and manage all student petitions.</p>
                 </div>
-                <div class="dashboard_cards">
-                    
+                <div class="petition_toolbar">
+                    <div class="petition_search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search Petition...">
+                    </div>
+                    <button type="button" class="refresh_button">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        Refresh
+                    </button>
+                </div>
+                <div class="petition_table_container">
+                    <table class="petition_table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Subject</th>
+                                <th>Student</th>
+                                <th>Program</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="petitionTableBody">
+                            <tr>
+                                <td>#00024</td>
+                                <td>IT 311</td>
+                                <td>Naruto Uzumaki</td>
+                                <td>BSIT</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td><button type="button" class="view_button">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>#00023</td>
+                                <td>IT 305</td>
+                                <td>Sasuke Uchiha</td>
+                                <td>BSIT</td>
+                                <td><span class="status review">Review</span></td>
+                                <td><button type="button" class="view_button">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>#00022</td>
+                                <td>IT 210</td>
+                                <td>Sakura Haruno</td>
+                                <td>BSCS</td>
+                                <td><span class="status approved">Approved</span></td>
+                                <td><button type="button" class="view_button">View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="no_petitions" id="noPetitions">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <h4>No petitions found</h4>
+                        <p>There are currently no student petitions to display.</p>
+                    </div>
                 </div>
             </main>
         </div>
