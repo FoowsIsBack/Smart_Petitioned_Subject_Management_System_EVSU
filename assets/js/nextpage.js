@@ -62,6 +62,30 @@ function adminPending(){
     window.location.href = "/superadmin/pending_petitions.php";
 }
 
+function departDashboard(){
+    window.location.href = "/department_head/departHead_dashboard.php";
+}
+
+function departGroups(){
+    window.location.href = "/department_head/departHead_petition_groups.php";
+}
+
+function departIntructors(){
+    window.location.href = "/department_head/departHead_instructors.php";
+}
+
+function departSubjects(){
+    window.location.href = "/department_head/departHead_subjects.php";
+}
+
+function departStudents(){
+    window.location.href = "/department_head/departHead_students.php";
+}
+
+function departReports(){
+    window.location.href = "/department_head/departHead_reports.php";
+}
+
 function adminRejected(){
     window.location.href = "/superadmin/rejected_petitions.php";
 }
