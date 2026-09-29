@@ -551,15 +551,16 @@ body{
 }
 
 @media (max-width: 900px) {
-    .main2 header {
+
+    .main2 header{
         padding: 15px 25px;
     }
 
-    .main_content {
+    .main_content{
         flex-direction: column;
     }
 
-    .sidebar {
+    .sidebar{
         width: 100%;
         min-height: auto;
         border-right: none;
@@ -567,11 +568,11 @@ body{
         padding: 15px;
     }
 
-    .sidebar_header {
+    .sidebar_header{
         display: none;
     }
 
-    .sidebar_nav {
+    .sidebar_nav{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -585,7 +586,7 @@ body{
         scrollbar-width: thin;
     }
 
-    .sidebar_nav > button {
+    .sidebar_nav > button{
         flex: 0 0 auto;
         width: auto;
         min-width: max-content;
@@ -597,52 +598,52 @@ body{
         justify-content: center;
     }
 
-    .sidebar_dropdown {
+    .sidebar_dropdown{
         flex: 0 0 auto;
         width: auto;
     }
 
-    .sidebar_dropdown > button {
+    .sidebar_dropdown > button{
         width: auto;
         min-width: max-content;
     }
 
-    .sidebar_dropdown_menu {
+    .sidebar_dropdown_menu{
         position: absolute;
         width: 220px;
         z-index: 50;
     }
 
-    .content {
+    .content{
         margin-left: 0;
         width: 100%;
         padding: 20px;
     }
 
-    .user_actions {
+    .user_actions{
         flex: 0 0 auto;
         display: flex;
         align-items: center;
         gap: 10px;
     }
 
-    .add_user_button {
+    .add_user_button{
         flex: 0 0 auto;
         height: 42px;
         padding: 0 18px;
         white-space: nowrap;
     }
 
-    .dashboard_cards {
+    .dashboard_cards{
         display: block;
         margin-top: 25px;
     }
 
-    .reports_grid {
+    .reports_grid{
         grid-template-columns: 1fr;
     }
 
-    .logs_toolbar {
+    .logs_toolbar{
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -650,62 +651,63 @@ body{
         gap: 15px;
     }
 
-    .logs_toolbar .petition_search {
+    .logs_toolbar .petition_search{
         flex: 1;
         max-width: 350px;
     }
 
-    .logs_toolbar .user_actions {
+    .logs_toolbar .user_actions{
         flex: 0 0 auto;
         display: flex;
         align-items: center;
         gap: 10px;
     }
 
-    .logs_toolbar .user_actions select {
+    .logs_toolbar .user_actions select{
         min-width: 120px;
     }
 
-    .petition_table_container {
+    .petition_table_container{
         width: 100%;
         overflow-x: auto;
     }
 
-    .petition_table {
+    .petition_table{
         min-width: 700px;
     }
 
-    .petition_pagination {
+    .petition_pagination{
         width: 100%;
     }
 }
 
-@media (max-width: 700px) {
-    .main2 header {
+@media (max-width: 700px){
+
+    .main2 header{
         padding: 12px 15px;
     }
 
-    .brand p {
+    .brand p{
         font-size: 13px;
     }
 
-    .brand img {
+    .brand img{
         width: 45px;
     }
 
-    .student_profile {
+    .student_profile{
         gap: 5px;
     }
 
-    .student_container p {
+    .student_container p{
         font-size: 13px;
     }
 
-    .main_content {
+    .main_content{
         flex-direction: column;
     }
 
-    .sidebar {
+    .sidebar{
         width: 100%;
         min-height: auto;
         border-right: none;
@@ -713,11 +715,11 @@ body{
         padding: 15px;
     }
 
-    .sidebar_header {
+    .sidebar_header{
         display: none;
     }
 
-    .sidebar_nav {
+    .sidebar_nav{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -731,7 +733,7 @@ body{
         scrollbar-width: thin;
     }
 
-    .sidebar_nav > button {
+    .sidebar_nav > button{
         flex: 0 0 auto;
         width: auto;
         min-width: max-content;
@@ -744,54 +746,54 @@ body{
         font-size: 15px;
     }
 
-    .sidebar_dropdown {
+    .sidebar_dropdown{
         flex: 0 0 auto;
         width: auto;
     }
 
-    .sidebar_dropdown > button {
+    .sidebar_dropdown > button{
         width: auto;
         min-width: max-content;
     }
 
-    .sidebar_dropdown_menu {
+    .sidebar_dropdown_menu{
         position: absolute;
         width: 220px;
         z-index: 50;
     }
 
-    .content {
+    .content{
         margin-left: 0;
         width: 100%;
         padding: 20px 15px;
     }
 
-    .admin_welcome {
+    .admin_welcome{
         margin-top: 10px;
     }
 
-    .admin_welcome h3 {
+    .admin_welcome h3{
         font-size: 1.6rem;
     }
 
-    .petition_search i {
+    .petition_search i{
         flex: 0 0 auto;
     }
 
-    .petition_search input {
+    .petition_search input{
         width: 100%;
         min-width: 0;
         font-size: 13px;
     }
 
-    .user_actions {
+    .user_actions{
         flex: 0 0 auto;
         display: flex;
         align-items: center;
         gap: 8px;
     }
 
-    .add_user_button {
+    .add_user_button{
         flex: 0 0 auto;
         width: auto;
         height: 42px;
@@ -800,7 +802,7 @@ body{
         white-space: nowrap;
     }
 
-    .refresh_button {
+    .refresh_button{
         flex: 0 0 auto;
         width: auto;
         height: 42px;
@@ -809,114 +811,112 @@ body{
         white-space: nowrap;
     }
 
-    .reports_toolbar {
+    .reports_toolbar{
         flex-direction: column;
         align-items: stretch;
     }
 
-    .reports_filter select {
+    .reports_filter select{
         width: 100%;
     }
 
-    .generate_report_button {
+    .generate_report_button{
         justify-content: center;
         width: 100%;
     }
 
-    .dashboard_cards {
+    .dashboard_cards{
         display: block;
         margin-top: 20px;
     }
 
-    .dashboard_card {
+    .dashboard_card{
         min-height: 90px;
         padding: 15px;
     }
 
-    .dashboard_card_icon {
+    .dashboard_card_icon{
         width: 40px;
         height: 40px;
         font-size: 16px;
     }
 
-    .dashboard_card_content h3 {
+    .dashboard_card_content h3{
         font-size: 22px;
     }
 
-    .dashboard_card_content span {
+    .dashboard_card_content span{
         font-size: 11px;
     }
 
-    .activity_chart {
+    .activity_chart{
         height: 260px;
         padding: 15px;
     }
 
-    .chart_bars {
+    .chart_bars{
         gap: 4px;
     }
 
-    .chart_bar {
+    .chart_bar{
         width: 65%;
     }
 
-    .report_actions {
+    .report_actions{
         flex-direction: column;
     }
 
-    .report_actions button {
+    .report_actions button{
         justify-content: center;
         width: 100%;
     }
 
-    /* System Logs */
-
-    .logs_toolbar {
+    .logs_toolbar{
         flex-direction: column;
         align-items: stretch;
         width: 100%;
         gap: 10px;
     }
 
-    .logs_toolbar .petition_search {
+    .logs_toolbar .petition_search{
         width: 100%;
         max-width: none;
     }
 
-    .logs_toolbar .user_actions {
+    .logs_toolbar .user_actions{
         width: 100%;
         display: flex;
         align-items: center;
         gap: 8px;
     }
 
-    .logs_toolbar .user_actions select {
+    .logs_toolbar .user_actions select{
         flex: 1;
         width: 100%;
         min-width: 0;
     }
 
-    .petition_table_container {
+    .petition_table_container{
         width: 100%;
         margin-top: 15px;
         overflow-x: auto;
     }
 
-    .petition_table {
+    .petition_table{
         min-width: 700px;
     }
 
-    .petition_table th {
+    .petition_table th{
         padding: 13px 14px;
         font-size: 14px;
     }
 
-    .petition_table td {
+    .petition_table td{
         padding: 13px 14px;
         font-size: 12px;
     }
 
-    .petition_pagination {
+    .petition_pagination{
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -924,211 +924,209 @@ body{
     }
 }
 
-@media (max-width: 480px) {
-    .main2 header {
+@media (max-width: 480px){
+
+    .main2 header{
         padding: 12px;
     }
 
-    .brand p {
+    .brand p{
         font-size: 11px;
         margin-left: 8px;
     }
 
-    .brand img {
+    .brand img{
         width: 42px;
     }
 
-    .student_container p {
+    .student_container p{
         font-size: 12px;
     }
 
-    .dropdown_arrow {
+    .dropdown_arrow{
         font-size: 16px;
     }
 
-    .notification_dropdown {
+    .notification_dropdown{
         position: fixed;
         top: 70px;
         right: 10px;
         width: calc(100vw - 20px);
     }
 
-    .profile_dropdown {
+    .profile_dropdown{
         position: fixed;
         top: 70px;
         right: 10px;
         width: calc(100vw - 20px);
     }
 
-    .sidebar {
+    .sidebar{
         padding: 12px;
     }
 
-    .sidebar_nav {
+    .sidebar_nav{
         gap: 5px;
         padding-bottom: 3px;
     }
 
-    .sidebar_nav > button {
+    .sidebar_nav > button{
         height: 42px;
         min-height: 42px;
         padding: 0 15px;
         font-size: 13px;
     }
 
-    .sidebar_dropdown > button {
+    .sidebar_dropdown > button{
         height: 42px;
         min-height: 42px;
         padding: 0 15px;
         font-size: 13px;
     }
 
-    .sidebar_dropdown_menu {
+    .sidebar_dropdown_menu{
         position: absolute;
         width: 200px;
     }
 
-    .sidebar_dropdown_menu button {
+    .sidebar_dropdown_menu button{
         font-size: 12px;
         padding: 10px 12px;
     }
 
-    .content {
+    .content{
         padding: 15px 12px;
     }
 
-    .admin_welcome h3 {
+    .admin_welcome h3{
         font-size: 1.4rem;
     }
 
-    .admin_welcome p {
+    .admin_welcome p{
         font-size: 13px;
     }
 
-    .user_actions {
+    .user_actions{
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
 
-    .add_user_button {
+    .add_user_button{
         width: 100%;
         height: 42px;
         padding: 0 15px;
         font-size: 13px;
     }
 
-    .refresh_button {
+    .refresh_button{
         width: 100%;
         height: 42px;
         padding: 0 15px;
         font-size: 13px;
     }
 
-    .view_button {
+    .view_button{
         padding: 6px 12px;
         font-size: 11px;
     }
 
-    .subject_cancel_button,
-    .subject_save_button {
+    .subject_cancel_button, .subject_save_button{
         width: 100%;
     }
 
-    .dashboard_cards {
+    .dashboard_cards{
         display: block;
     }
 
-    .reports_grid {
+    .reports_grid{
         grid-template-columns: 1fr;
     }
 
-    .subject_report_info {
+    .subject_report_info{
         align-items: flex-start;
         flex-direction: column;
         gap: 4px;
     }
 
-    .activity_chart {
+    .activity_chart{
         height: 230px;
         padding: 12px 8px;
     }
 
-    .chart_y_axis {
+    .chart_y_axis{
         width: 28px;
         font-size: 9px;
     }
 
-    .chart_column span {
+    .chart_column span{
         font-size: 8px;
     }
 
-    .status_circle {
+    .status_circle{
         width: 125px;
         height: 125px;
         border-width: 17px;
     }
 
-    /* System Logs */
-
-    .logs_toolbar {
+    .logs_toolbar{
         width: 100%;
         gap: 10px;
     }
 
-    .logs_toolbar .petition_search {
+    .logs_toolbar .petition_search{
         width: 100%;
         max-width: none;
         height: 42px;
     }
 
-    .logs_toolbar .user_actions {
+    .logs_toolbar .user_actions{
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
 
-    .logs_toolbar .user_actions select {
+    .logs_toolbar .user_actions select{
         width: 100%;
         min-width: 0;
         height: 42px;
     }
 
-    .petition_table_container {
+    .petition_table_container{
         width: 100%;
         margin-top: 15px;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
 
-    .petition_table {
+    .petition_table{
         min-width: 650px;
     }
 
-    .petition_table th {
+    .petition_table th{
         padding: 12px;
         font-size: 12px;
     }
 
-    .petition_table td {
+    .petition_table td{
         padding: 12px;
         font-size: 12px;
     }
 
-    .petition_pagination {
+    .petition_pagination{
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
     }
 
-    .pagination_buttons {
+    .pagination_buttons{
         width: 100%;
         justify-content: flex-end;
     }
 
-    .pagination_buttons button {
+    .pagination_buttons button{
         min-width: 32px;
         height: 32px;
         padding: 0 8px;
