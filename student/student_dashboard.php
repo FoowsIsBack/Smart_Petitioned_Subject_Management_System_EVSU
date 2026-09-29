@@ -59,7 +59,7 @@
             <main class="content">
                 <div class="studentwelcome">
                     <h3>Welcome, Kiryll Dave</h3>
-                    <p>BS Information Technology / 3rd Year </p>
+                    <p>BS Information Technology / 3rd Year</p>
                     <p>Student ID: 2023-10453</p>
                 </div>
                 <div class="dashboard_cards">
