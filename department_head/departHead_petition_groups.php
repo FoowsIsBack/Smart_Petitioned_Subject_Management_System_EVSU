@@ -34,8 +34,7 @@
                     </div>
                     <div class="profile_dropdown" id="profileDropdown">
                         <div class="profile_info">
-                            <p>kirylldavebangcoyo@evsu.edu.ph</p>
-                            <span>2023-10453</span>
+                            <p>jaymelmorpos@evsu.edu.ph</p>
                         </div>
                         <div class="profile_divider"></div>
                         <a href="#">My Profile</a>
@@ -60,8 +59,91 @@
             </aside>
             <main class="content">
                 <div class="studentwelcome">
-                    <h3>Petition Groups</h3>
-                    <p>All petition groups across the department.</p>
+                    <h3>Student Records</h3>
+                    <p>Petitioning students in the current term.</p>
+                </div>
+                <div class="students_table_card">
+                    <div class="table_controls">
+                        <div class="search_box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="searchInput" placeholder="Search reference or subject">
+                        </div>
+                        <div class="filter_box">
+                            <select class="status_filter" id="statusFilter">
+                                <option value="all">All status</option>
+                                <option value="CLASS ACTIVATED">Class Activated</option>
+                                <option value="FULLY APPROVED">Fully Approved</option>
+                                <option value="AWAITING PAYMENT">Awaiting Payment</option>
+                                <option value="FOR DEPARTMENT HEAD REVIEW">For Department Head Review</option>
+                                <option value="GATHERING PETITIONERS">Gathering Petitioners</option>
+                                <option value="REJECTED">Rejected</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table_responsive">
+                        <table class="students_table">
+                            <thead>
+                                <tr>
+                                    <th>Reference</th>
+                                    <th>Subject</th>
+                                    <th>Petitioners</th>
+                                    <th>Instructor</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php if (!empty($students)): ?>
+                                    <?php foreach ($students as $row): ?>
+                                        <tr>
+                                            <td class="ref_no"><?php echo htmlspecialchars($row['reference_no']); ?></td>
+                                            <td>
+                                                <strong class="subj_code"><?php echo htmlspecialchars($row['subject_code']); ?></strong>
+                                                <span class="subj_title"><?php echo htmlspecialchars($row['subject_title']); ?></span>
+                                            </td>
+                                            <td>
+                                                <strong class="count_bold"><?php echo htmlspecialchars($row['current_petitioners']); ?></strong> 
+                                                <span class="count_muted">/ <?php echo htmlspecialchars($row['min_petitioners']); ?> min</span>
+                                            </td>
+                                            <td class="instructor_name <?php echo empty($row['instructor']) ? 'unassigned' : ''; ?>">
+                                                <?php echo !empty($row['instructor']) ? htmlspecialchars($row['instructor']) : 'Not yet assigned'; ?>
+                                            </td>
+                                            <td>
+                                                <?php 
+                                                    $status = $row['status'];
+                                                    $badgeClass = 'badge_orange'; // default
+                                                    if ($status == 'CLASS ACTIVATED') $badgeClass = 'badge_green';
+                                                    elseif ($status == 'FULLY APPROVED') $badgeClass = 'badge_green_filled';
+                                                    elseif ($status == 'AWAITING PAYMENT') $badgeClass = 'badge_yellow';
+                                                    elseif ($status == 'REJECTED') $badgeClass = 'badge_red';
+                                                ?>
+                                                <span class="status_badge <?php echo $badgeClass; ?>">• <?php echo htmlspecialchars($status); ?></span>
+                                            </td>
+                                            <td>
+                                                <a href="view_petition.php?id=<?php echo $row['id']; ?>" class="action_btn">Open</a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                <?php else: ?>
+                                    <tr>
+                                        <td colspan="6" class="table_empty_state">
+                                            <i class="fa-solid fa-folder-open"></i>
+                                            <p>No student petition records found.</p>
+                                            <span>Try adjusting your search or filter options.</span>
+                                        </td>
+                                    </tr>
+                                <?php endif; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table_footer">
+                        <p>Showing <?php echo !empty($students) ? count($students) : 0; ?> petition group(s)</p>
+                        <div class="pagination">
+                            <button class="page_btn" disabled><i class="fa-solid fa-chevron-left"></i></button>
+                            <span class="page_number">1 / 1</span>
+                            <button class="page_btn" disabled><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
