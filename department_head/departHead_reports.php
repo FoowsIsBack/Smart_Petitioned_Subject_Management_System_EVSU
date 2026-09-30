@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/department_reports.css">
     <link rel="shortcut icon" href="/assets/icons/evsu_logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <title>Department Head | Reports</title>
 </head>
 <body>
@@ -62,6 +61,99 @@
                 <div class="studentwelcome">
                     <h3>Petition Reports</h3>
                     <p>Term summary for the current semester.</p>
+                </div>
+                <div class="reports_container">
+                    <div class="report_section">
+                        <h4 class="section_title">Petition Overview</h4>
+                        <div class="dashboard_cards">
+                            <div id="card1" class="report_card">
+                                <span>TOTAL PETITIONS</span>
+                                <h2>0</h2>
+                            </div>
+                            <div id="card2" class="report_card">
+                                <span>PETITIONING STUDENTS</span>
+                                <h2>0</h2>
+                            </div>
+                            <div id="card3" class="report_card">
+                                <span>FOR MY REVIEW</span>
+                                <h2>0</h2>
+                            </div>
+                            <div id="card4" class="report_card">
+                                <span>GATHERING PETITIONERS</span>
+                                <h2>0</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="report_section">
+                        <h4 class="section_title">Workflow Distribution</h4>
+                        <div class="workflow_card">
+                            <?php 
+                            $max_val = !empty($workflow_counts) ? max($workflow_counts) : 1;
+                            if ($max_val <= 0) $max_val = 1;
+                            ?>
+                            <?php if (!empty($workflow_counts)): ?>
+                                <?php foreach ($workflow_counts as $label => $count): ?>
+                                    <?php 
+                                        $percentage = round(($count / $max_val) * 100);
+                                    ?>
+                                    <div class="workflow_item">
+                                        <div class="wf_info">
+                                            <span class="wf_label"><?php echo htmlspecialchars($label); ?></span>
+                                            <span class="wf_value"><?php echo htmlspecialchars($count); ?></span>
+                                        </div>
+                                        <div class="wf_bar_bg">
+                                            <div class="wf_bar_fill" style="width: <?php echo $percentage; ?>%;"></div>
+                                        </div>
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <div class="workflow_item">
+                                    <div class="wf_info">
+                                        <span class="wf_label">No data available</span>
+                                        <span class="wf_value">0</span>
+                                    </div>
+                                    <div class="wf_bar_bg">
+                                        <div class="wf_bar_fill" style="width: 0%;"></div>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="report_section">
+                        <h4 class="section_title">Per-Subject Summary</h4>
+                        <div class="table_responsive">
+                            <table class="reports_table">
+                                <thead>
+                                    <tr>
+                                        <th>Subject</th>
+                                        <th>Petitioners</th>
+                                        <th>Instructor</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="subject_code">IT 311</td>
+                                        <td>12</td>
+                                        <td>Instructor A</td>
+                                        <td><span class="status_badge approved">Approved</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject_code">IT 305</td>
+                                        <td>8</td>
+                                        <td>Instructor B</td>
+                                        <td><span class="status_badge gathering">Gathering</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="subject_code">IT 210</td>
+                                        <td>15</td>
+                                        <td>Instructor C</td>
+                                        <td><span class="status_badge review">For Review</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>
