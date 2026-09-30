@@ -6,7 +6,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     position: relative;
     min-height: 100vh;
 }
@@ -31,7 +31,7 @@ body{
 
 .brand p{
     margin-left: 10px;
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 
@@ -44,13 +44,13 @@ body{
 }
 
 .student_profile p{
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 
 .dropdown_arrow{
     margin-bottom: 6px;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 18px;
 }
 
@@ -69,7 +69,7 @@ body{
 }
 
 .student_container p{
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 
@@ -80,7 +80,7 @@ body{
     right: 0;
     width: 230px;
     margin-top: 10px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     overflow: hidden;
@@ -116,7 +116,7 @@ body{
 .profile_info span{
     display: block;
     margin-top: 5px;
-    color: gray;
+    color: rgb(128, 128, 128);
     font-size: 12px;
 }
 
@@ -126,18 +126,6 @@ body{
     margin: 0 15px;
 }
 
-.profile_dropdown a{
-    display: block;
-    padding: 12px 15px;
-    color: rgb(50, 50, 50);
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.profile_dropdown a:hover{
-    background-color: rgb(245, 245, 245);
-}
-
 .notification{
     position: relative;
     display: flex;
@@ -145,7 +133,7 @@ body{
     justify-content: center;
     width: 30px;
     height: 30px;
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
@@ -166,7 +154,7 @@ body{
     padding: 0 3px;
     border-radius: 50%;
     background-color: rgb(200, 30, 30);
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 9px;
     font-weight: bold;
     display: flex;
@@ -181,7 +169,7 @@ body{
     right: -10px;
     width: 300px;
     margin-top: 10px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     overflow: hidden;
@@ -247,13 +235,21 @@ body{
 .notification_item span{
     display: block;
     margin-top: 6px;
-    color: gray;
+    color: rgb(128, 128, 128);
     font-size: 10px;
 }
 
 .main_content{
     display: flex;
     min-height: calc(100vh - 85px);
+}
+
+.sidebar{
+    width: 240px;
+    min-height: calc(100vh - 85px);
+    background-color: rgb(255, 255, 255);
+    border-right: 1px solid rgb(194, 194, 194);
+    padding: 20px 15px;
 }
 
 .sidebar_header h3{
@@ -265,14 +261,6 @@ body{
 .sidebar_header{
     border-bottom: 1px solid rgb(194, 194, 194);
     margin: 0 -15px 15px;
-}
-
-.sidebar{
-    width: 240px;
-    min-height: calc(100vh - 85px);
-    background-color: white;
-    border-right: 1px solid rgb(194, 194, 194);
-    padding: 20px 15px;
 }
 
 .sidebar_nav{
@@ -295,45 +283,300 @@ body{
 }
 
 .sidebar_nav button:hover{
-    background-color: whitesmoke;
-    color: white;
     background-color: rgb(162, 38, 36);
+    color: rgb(255, 255, 255);
 }
 
 .sidebar_nav button:active{
     opacity: 0.6;
 }
 
-.content{
-    margin-left: 30px;
-    flex: 1;
-    background-color: rgb(248, 248, 248);
-    padding: 25px;
-}
-
 .sidebar_nav button.dashboard{
-    border-left: 4px solid gold;
+    border-left: 4px solid rgb(255, 215, 0);
     background-color: rgb(162, 38, 36);
-    color: white;
+    color: rgb(255, 255, 255);
     box-sizing: border-box;
     text-indent: -4px;
 }
 
+.content{
+    flex: 1;
+    background-color: rgb(248, 248, 248);
+    padding: 30px;
+}
+
 .studentwelcome{
-    margin-top: 2%;
+    margin-bottom: 25px;
 }
 
 .studentwelcome h3{
-    font-size: 2rem;
+    font-size: 1.8rem;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
 }
 
 .studentwelcome p{
     margin-top: 5px;
-    color: gray;
+    color: rgb(110, 110, 110);
+    font-size: 0.95rem;
 }
 
 .dashboard_cards{
     margin-top: 25px;
     display: flex;
     gap: 40px;
+}
+
+.students_table_card{
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin-top: 25px;
+    padding: 0;
+}
+
+.table_controls{
+    padding: 20px 24px;
+}
+
+.search_box{
+    position: relative;
+    width: 320px;
+    display: flex;
+    align-items: center;
+}
+
+.search_box i{
+    position: absolute;
+    left: 14px;
+    color: rgb(150, 150, 150);
+    font-size: 14px;
+}
+
+.search_box input{
+    width: 100%;
+    padding: 10px 14px 10px 38px;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 10px;
+    font-size: 13px;
+    color: rgb(50, 50, 50);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.search_box input::placeholder{
+    color: rgb(150, 150, 150);
+}
+
+.search_box input:focus{
+    border-color: rgb(139, 18, 16);
+}
+
+.table_responsive{
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.students_table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.students_table th{
+    background-color: rgb(246, 242, 242);
+    color: black;
+    font-size: 15px;
+    padding: 14px 20px;
+    border-top: 1px solid rgba(156, 156, 156, 0.462);
+    border-bottom: 1px solid rgba(156, 156, 156, 0.462);
+}
+
+.students_table td{
+    padding: 18px 24px;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    font-size: 14px;
+    color: rgb(80, 80, 80);
+}
+
+.students_table tbody tr:last-child td{
+    border-bottom: none;
+}
+
+.student_name_bold{
+    font-weight: bold;
+    color: rgb(30, 30, 30) !important;
+}
+
+.empty_row td {
+    text-align: center;
+    padding: 50px 20px !important;
+}
+
+.empty_state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty_state i {
+    font-size: 44px;
+    color: rgb(180, 180, 180);
+    margin-bottom: 12px;
+}
+
+.empty_state p {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(80, 80, 80);
+    margin-bottom: 4px;
+}
+
+.empty_state span {
+    font-size: 13px;
+    color: rgb(140, 140, 140);
+}
+
+@media (max-width: 900px){
+
+    .main2 header{
+        padding: 15px 25px;
+    }
+
+    .main_content{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgb(194, 194, 194);
+        padding: 15px;
+    }
+
+    .sidebar_header{
+        display: none;
+    }
+
+    .sidebar_nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 5px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        scrollbar-width: thin;
+    }
+
+    .sidebar_nav button{
+        flex: 0 0 auto;
+        width: auto;
+        min-width: max-content;
+        padding: 12px 15px;
+        white-space: nowrap;
+    }
+
+    .content{
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 700px){
+
+    .main2 header{
+        padding: 12px 15px;
+    }
+
+    .brand p{
+        font-size: 13px;
+    }
+
+    .brand img{
+        width: 45px;
+    }
+
+    .student_profile{
+        gap: 5px;
+    }
+
+    .student_container p{
+        font-size: 13px;
+    }
+
+    .content{
+        padding: 20px 15px;
+    }
+
+    .studentwelcome h3{
+        font-size: 1.5rem;
+    }
+
+    .search_box{
+        width: 100%;
+    }
+
+    .students_table{
+        min-width: 700px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .brand p{
+        font-size: 11px;
+        margin-left: 8px;
+    }
+
+    .brand img{
+        width: 42px;
+    }
+
+    .student_container p{
+        font-size: 12px;
+    }
+
+    .dropdown_arrow{
+        font-size: 16px;
+    }
+
+    .notification_dropdown, .profile_dropdown{
+        position: fixed;
+        top: 70px;
+        right: 10px;
+        width: calc(100vw - 20px);
+    }
+
+    .sidebar_nav button{
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .content{
+        padding: 15px 12px;
+    }
+
+    .studentwelcome h3{
+        font-size: 1.3rem;
+    }
+
+    .studentwelcome p{
+        font-size: 12px;
+    }
+
+    .table_controls{
+        padding: 14px;
+    }
+
+    .students_table th, .students_table td{
+        padding: 12px 16px;
+    }
 }
