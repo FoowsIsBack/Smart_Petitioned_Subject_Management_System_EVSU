@@ -20,7 +20,7 @@
                 <div class="student_profile" id="profileButton">
                     <div class="notification" id="notificationButton">
                         <i class="fa-solid fa-bell"></i>
-                        <span class="notification_badge" id="notificationBadge">2</span>
+                        <span class="notification_badge" id="notificationBadge">0</span>
                         <div class="notification_dropdown" id="notificationDropdown">
                             <div class="notification_header">
                                 <strong>Notifications</strong>
@@ -62,6 +62,38 @@
                 <div class="studentwelcome">
                     <h3>Student Records</h3>
                     <p>Petitioning students in the current term.</p>
+                </div>
+                <div class="students_table_card">
+                    <div class="table_controls">
+                        <div class="search_box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search name, ID, or course">
+                        </div>
+                    </div>
+                    <div class="table_responsive">
+                        <table class="students_table">
+                            <thead>
+                                <tr>
+                                    <th>Student</th>
+                                    <th>Student ID</th>
+                                    <th>Course</th>
+                                    <th>Year Level</th>
+                                    <th>Petitioned Subjects</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="empty_row">
+                                    <td colspan="5">
+                                        <div class="empty_state">
+                                            <i class="fa-solid fa-folder-open"></i>
+                                            <p>No student records found</p>
+                                            <span>There are currently no petitioning students recorded in this term.</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </main>
         </div>
