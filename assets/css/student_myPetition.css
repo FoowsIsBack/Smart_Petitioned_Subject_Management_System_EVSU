@@ -389,6 +389,11 @@ body{
     cursor: pointer;
 }
 
+.status_filter select:focus{
+    border-color: rgb(139, 18, 16);
+}
+
+
 .table_container{
     width: 100%;
     overflow-x: auto;
