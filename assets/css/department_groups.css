@@ -126,16 +126,12 @@ body{
     margin: 0 15px;
 }
 
-.profile_dropdown a{
-    display: block;
-    padding: 12px 15px;
-    color: rgb(50, 50, 50);
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.profile_dropdown a:hover{
-    background-color: rgb(245, 245, 245);
+.sidebar_nav button.dashboard{
+    border-left: 4px solid gold;
+    background-color: rgb(162, 38, 36);
+    color: white;
+    box-sizing: border-box;
+    text-indent: -4px;
 }
 
 .notification{
@@ -295,28 +291,27 @@ body{
 }
 
 .sidebar_nav button:hover{
-    background-color: whitesmoke;
-    color: white;
     background-color: rgb(162, 38, 36);
+    color: white;
 }
 
 .sidebar_nav button:active{
     opacity: 0.6;
 }
 
-.content{
-    margin-left: 30px;
-    flex: 1;
-    background-color: rgb(248, 248, 248);
-    padding: 25px;
-}
-
-.sidebar_nav button.dashboard{
+.sidebar_nav button.myPetition{
     border-left: 4px solid gold;
     background-color: rgb(162, 38, 36);
     color: white;
     box-sizing: border-box;
     text-indent: -4px;
+}
+
+.content{
+    margin-left: 0;
+    flex: 1;
+    background-color: rgb(248, 248, 248);
+    padding: 25px;
 }
 
 .studentwelcome{
@@ -332,8 +327,454 @@ body{
     color: gray;
 }
 
-.dashboard_cards{
-    margin-top: 25px;
+.students_table_card{
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin-top: 20px;
+    padding: 0; 
+}
+
+.table_controls{
     display: flex;
-    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    margin: 0;
+}
+
+.search_box{
+    position: relative;
+    width: 280px;
+}
+
+.search_box i{
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(148, 163, 184);
+    font-size: 14px;
+}
+
+.search_box input{
+    width: 100%;
+    padding: 10px 14px 10px 38px;
+    border: 1px solid rgb(226, 232, 240);
+    border-radius: 20px;
+    font-size: 13px;
+    color: rgb(51, 65, 85);
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    transition: border-color 0.2s;
+}
+
+.search_box input:focus{
+    border-color: rgb(139, 18, 16);
+}
+
+.status_filter{
+    padding: 10px 16px;
+    border: 1px solid rgb(226, 232, 240);
+    border-radius: 12px;
+    font-size: 13px;
+    color: rgb(51, 65, 85);
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    cursor: pointer;
+}
+
+.status_filter:focus{
+    border-color: rgb(139, 18, 16);
+}
+
+.table_responsive{
+    width: 100%;
+    overflow-x: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.students_table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin: 0;
+}
+
+.students_table th{
+    background-color: rgb(246, 242, 242);
+    color: black;
+    font-size: 15px;
+    padding: 14px 20px;
+    border-top: 1px solid rgba(156, 156, 156, 0.462);
+    border-bottom: 1px solid rgba(156, 156, 156, 0.462);
+    margin: 0;
+}
+
+.students_table td{
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(156, 156, 156, 0.462);
+    font-size: 13px;
+    color: rgb(51, 65, 85);
+    vertical-align: middle;
+    margin: 0;
+}
+
+.ref_no{
+    font-weight: 600;
+    color: rgb(30, 41, 59);
+}
+
+.subj_code{
+    display: block;
+    font-weight: 700;
+    color: rgb(15, 23, 42);
+    font-size: 14px;
+}
+
+.subj_title{
+    display: block;
+    font-size: 12px;
+    color: rgb(100, 116, 139);
+    margin-top: 2px;
+}
+
+.count_bold{
+    font-weight: 700;
+    color: rgb(15, 23, 42);
+}
+
+.count_muted{
+    color: rgb(100, 116, 139);
+    font-size: 12px;
+}
+
+.instructor_name{
+    color: rgb(71, 85, 105);
+}
+
+.instructor_name.unassigned{
+    color: rgb(148, 163, 184);
+    font-style: italic;
+}
+
+.status_badge{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.badge_green{
+    background-color: rgb(228, 245, 236);
+    color: rgb(30, 130, 75);
+    border: 1px solid rgb(185, 228, 204);
+}
+
+.badge_green_filled{
+    background-color: rgb(220, 242, 228);
+    color: rgb(35, 120, 70);
+    border: 1px solid rgb(180, 220, 195);
+}
+
+.badge_yellow{
+    background-color: rgb(254, 246, 228);
+    color: rgb(160, 105, 20);
+    border: 1px solid rgb(242, 224, 180);
+}
+
+.badge_orange{
+    background-color: rgb(253, 240, 228);
+    color: rgb(170, 90, 20);
+    border: 1px solid rgb(245, 215, 185);
+}
+
+.badge_red{
+    background-color: rgb(253, 232, 232);
+    color: rgb(180, 40, 40);
+    border: 1px solid rgb(240, 190, 190);
+}
+
+.action_btn{
+    display: inline-block;
+    padding: 6px 16px;
+    border: 1px solid rgb(203, 213, 225);
+    background: rgb(255, 255, 255);
+    color: rgb(51, 65, 85);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.action_btn:hover{
+    background-color: rgb(248, 250, 252);
+    border-color: rgb(148, 163, 184);
+}
+
+.table_empty_state{
+    text-align: center !important;
+    padding: 48px 16px !important;
+    color: rgb(148, 163, 184);
+}
+
+.table_empty_state i{
+    font-size: 40px;
+    color: black;
+    margin-bottom: 12px;
+}
+
+.table_empty_state p{
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(71, 85, 105);
+    margin-bottom: 4px;
+}
+
+.table_empty_state span{
+    font-size: 13px;
+    color: rgb(148, 163, 184);
+}
+
+.table_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-top: 1px solid rgb(203, 213, 225);
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.table_footer p{
+    font-size: 13px;
+    color: rgb(100, 116, 139);
+    margin: 0;
+}
+
+.pagination{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.page_btn{
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgb(226, 232, 240);
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: rgb(100, 116, 139);
+    transition: all 0.2s;
+}
+
+.page_btn:hover:not(:disabled){
+    border-color: rgb(139, 18, 16);
+    color: rgb(139, 18, 16);
+}
+
+.page_btn:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.page_number{
+    font-size: 13px;
+    color: rgb(51, 65, 85);
+    font-weight: 500;
+}
+
+@media (max-width: 900px){
+
+    .main2 header{
+        padding: 15px 25px;
+    }
+
+    .main_content{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgb(194, 194, 194);
+        padding: 15px;
+    }
+
+    .sidebar_header{
+        display: none;
+    }
+
+    .sidebar_nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 5px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        scrollbar-width: thin;
+    }
+
+    .sidebar_nav button{
+        flex: 0 0 auto;
+        width: auto;
+        min-width: max-content;
+        padding: 12px 15px;
+        white-space: nowrap;
+    }
+
+    .content{
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .table_controls{
+        gap: 15px;
+    }
+
+    .search_box{
+        width: 280px;
+    }
+}
+
+@media (max-width: 700px){
+
+    .main2 header{
+        padding: 12px 15px;
+    }
+
+    .brand p{
+        font-size: 13px;
+    }
+
+    .brand img{
+        width: 45px;
+    }
+
+    .student_profile{
+        gap: 5px;
+    }
+
+    .student_container p{
+        font-size: 13px;
+    }
+
+    .content{
+        padding: 20px 15px;
+    }
+
+    .studentwelcome{
+        margin-top: 10px;
+    }
+
+    .studentwelcome h3{
+        font-size: 1.6rem;
+    }
+
+    .table_controls{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .search_box{
+        width: 100%;
+    }
+
+    .status_filter{
+        width: 100%;
+    }
+
+    .table_responsive{
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .students_table{
+        min-width: 850px;
+    }
+
+    .table_footer{
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .brand p{
+        font-size: 11px;
+        margin-left: 8px;
+    }
+
+    .brand img{
+        width: 42px;
+    }
+
+    .student_container p{
+        font-size: 12px;
+    }
+
+    .dropdown_arrow{
+        font-size: 16px;
+    }
+
+    .notification_dropdown, .profile_dropdown{
+        position: fixed;
+        top: 70px;
+        right: 10px;
+        width: calc(100vw - 20px);
+    }
+
+    .sidebar_nav button{
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .content{
+        padding: 15px 12px;
+    }
+
+    .studentwelcome h3{
+        font-size: 1.4rem;
+    }
+
+    .studentwelcome p{
+        font-size: 13px;
+    }
+
+    .students_table_card{
+        margin-top: 15px;
+        border-radius: 12px;
+    }
+
+    .table_controls{
+        padding: 14px;
+    }
+
+    .table_footer{
+        padding: 14px;
+    }
+
+    .pagination{
+        gap: 8px;
+    }
 }
