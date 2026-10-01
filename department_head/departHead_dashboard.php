@@ -34,12 +34,11 @@
                     </div>
                     <div class="profile_dropdown" id="profileDropdown">
                         <div class="profile_info">
-                            <p>kirylldavebangcoyo@evsu.edu.ph</p>
-                            <span>2023-10453</span>
+                            <p>jaymelmorpos@evsu.edu.ph</p>
+                            <span>IT - Department Head</span>
                         </div>
                         <div class="profile_divider"></div>
-                        <a href="#">My Profile</a>
-                        <a href="/student/student_login.php">Logout</a>
+                        <a href="/employee/employee_login.php">Logout</a>
                     </div>
                 </div>
             </header>
