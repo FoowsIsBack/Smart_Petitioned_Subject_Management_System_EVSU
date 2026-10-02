@@ -411,32 +411,32 @@ body{
     color: rgb(30, 30, 30) !important;
 }
 
-.empty_row td {
+.empty_row td{
     text-align: center;
     padding: 50px 20px !important;
 }
 
-.empty_state {
+.empty_state{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.empty_state i {
+.empty_state i{
     font-size: 44px;
-    color: rgb(180, 180, 180);
+    color: black;
     margin-bottom: 12px;
 }
 
-.empty_state p {
+.empty_state p{
     font-size: 16px;
     font-weight: bold;
     color: rgb(80, 80, 80);
     margin-bottom: 4px;
 }
 
-.empty_state span {
+.empty_state span{
     font-size: 13px;
     color: rgb(140, 140, 140);
 }
