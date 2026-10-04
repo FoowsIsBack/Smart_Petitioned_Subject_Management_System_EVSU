@@ -1,0 +1,620 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    min-height: 100vh;
+}
+
+.main2 header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background-color: rgb(139, 18, 16);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+}
+
+.brand img{
+    width: 55px;
+}
+
+.brand p{
+    margin-left: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.student_profile{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.dropdown_arrow{
+    margin-bottom: 6px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.dropdown_arrow:active{
+    opacity: 0.6;
+}
+
+.student_container{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.student_container:active{
+    opacity: 0.63;
+}
+
+.student_container p{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.profile_dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 230px;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 10;
+}
+
+.profile_dropdown.show{
+    display: block;
+}
+
+.profile_dropdown a{
+    display: block;
+    padding: 12px 15px;
+    color: rgb(50, 50, 50);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.profile_dropdown a:hover{
+    background-color: rgb(245, 245, 245);
+}
+
+.profile_info{
+    padding: 15px;
+}
+
+.profile_info p{
+    color: rgb(40, 40, 40);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.profile_info span{
+    display: block;
+    margin-top: 5px;
+    color: rgb(128, 128, 128);
+    font-size: 12px;
+}
+
+.profile_divider{
+    height: 1px;
+    background-color: rgb(225, 225, 225);
+    margin: 0 15px;
+}
+
+.notification{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.notification i{
+    font-size: 18px;
+}
+
+.notification i:active{
+    opacity: 0.6;
+}
+
+.notification_badge{
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    min-width: 15px;
+    height: 15px;
+    padding: 0 3px;
+    border-radius: 50%;
+    background-color: rgb(200, 30, 30);
+    color: rgb(255, 255, 255);
+    font-size: 9px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification_dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: -10px;
+    width: 300px;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 20;
+    color: rgb(40, 40, 40);
+}
+
+.notification_dropdown.show{
+    display: block;
+}
+
+.notification_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid rgb(225, 225, 225);
+}
+
+.notification_header strong{
+    font-size: 15px;
+}
+
+.notification_header button{
+    border: none;
+    background: none;
+    color: rgb(139, 18, 16);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.notification_header button:active{
+    opacity: 0.6;
+}
+
+.main_content{
+    display: flex;
+    min-height: calc(100vh - 85px);
+}
+
+.sidebar{
+    width: 240px;
+    min-height: calc(100vh - 85px);
+    background-color: rgb(255, 255, 255);
+    border-right: 1px solid rgb(194, 194, 194);
+    padding: 20px 15px;
+}
+
+.sidebar_header{
+    border-bottom: 1px solid rgb(194, 194, 194);
+    margin: 0 -15px 15px;
+}
+
+.sidebar_header h3{
+    text-align: center;
+    color: rgb(60, 60, 60);
+    margin-bottom: 15px;
+}
+
+.sidebar_nav{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar_nav button{
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    color: rgb(60, 60, 60);
+    text-align: left;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sidebar_nav button:hover{
+    background-color: rgb(162, 38, 36);
+    color: rgb(255, 255, 255);
+}
+
+.sidebar_nav button:active{
+    opacity: 0.6;
+}
+
+.sidebar_nav button.dashboard{
+    border-left: 4px solid rgb(255, 215, 0);
+    background-color: rgb(162, 38, 36);
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    text-indent: -4px;
+}
+
+.content{
+    margin-left: 0;
+    flex: 1;
+    background-color: rgb(248, 248, 248);
+    padding: 30px;
+}
+
+.studentwelcome{
+    margin-bottom: 25px;
+}
+
+.studentwelcome h3{
+    font-size: 1.8rem;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+
+.studentwelcome p{
+    margin-top: 5px;
+    color: rgb(128, 128, 128);
+    font-size: 0.95rem;
+}
+
+.table_responsive{
+    width: 100%;
+    overflow-x: auto;
+}
+
+.text_center{
+    text-align: center;
+}
+
+.payment_card{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+
+.payment_card_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px 30px;
+    border-bottom: 1px solid rgb(241, 245, 249);
+}
+
+.subject_info h4{
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: rgb(30, 41, 59);
+    margin-bottom: 4px;
+}
+
+.subject_info .ref_number{
+    font-size: 0.85rem;
+    color: rgb(148, 163, 184);
+    font-weight: 500;
+}
+
+.amount_info{
+    text-align: right;
+}
+
+.amount_label{
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgb(148, 163, 184);
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.amount_val{
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: rgb(15, 23, 42);
+    margin-bottom: 4px;
+}
+
+.paid_status_badge{
+    display: inline-block;
+    background-color: rgb(254, 243, 199);
+    color: rgb(146, 64, 14);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 12px;
+}
+
+.payment_table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: none;
+}
+
+.payment_table th{
+    background-color: rgb(246, 242, 242);
+    color: black;
+    font-size: 15px;
+    padding: 14px 20px;
+    text-align: left;
+    border-top: 1px solid rgba(156, 156, 156, 0.462);
+    border-bottom: 1px solid rgba(156, 156, 156, 0.462);
+    white-space: nowrap;
+}
+
+.payment_table td{
+    padding: 16px 20px;
+    font-size: 0.9rem;
+    color: rgb(51, 65, 85);
+    border-bottom: 1px solid rgb(248, 250, 252);
+    vertical-align: middle;
+}
+
+.payment_table tbody tr:last-child td{
+    border-bottom: none;
+}
+
+.student_name{
+    font-weight: 600;
+    color: rgb(30, 41, 59);
+}
+
+.student_id{
+    color: rgb(100, 116, 139);
+}
+
+.text_right{
+    text-align: right;
+}
+
+.badge_paid{
+    display: inline-block;
+    background-color: rgb(220, 252, 231);
+    color: rgb(21, 128, 61);
+    border: 1px solid rgb(187, 247, 208);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge_unpaid{
+    display: inline-block;
+    background-color: rgb(254, 243, 199);
+    color: rgb(180, 83, 9);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.text_verified{
+    color: rgb(100, 116, 139);
+    font-weight: 500;
+    font-size: 0.88rem;
+}
+
+.or_form{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.or_input{
+    border: 1px solid rgb(203, 213, 225);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    outline: none;
+    width: 140px;
+    transition: border-color 0.2s ease;
+}
+
+.or_input:focus{
+    border-color: rgb(139, 18, 16);
+}
+
+.btn_verify{
+    background-color: rgb(112, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn_verify:hover{
+    background-color: rgb(80, 0, 0);
+}
+
+.empty_row td{
+    text-align: center;
+    padding: 60px 20px !important;
+}
+
+.empty_state{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty_state i{
+    font-size: 42px;
+    color: black;
+    margin-bottom: 12px;
+}
+
+.empty_state p{
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(51, 65, 85);
+    margin-bottom: 4px;
+}
+
+.empty_state span{
+    font-size: 0.85rem;
+    color: rgb(148, 163, 184);
+}
+
+@media (max-width: 900px){
+
+    .main2 header{
+        padding: 15px 25px;
+    }
+
+    .main_content{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgb(194, 194, 194);
+        padding: 15px;
+    }
+
+    .sidebar_header{
+        display: none;
+    }
+
+    .sidebar_nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 5px;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        scrollbar-width: thin;
+    }
+
+    .sidebar_nav button{
+        flex: 0 0 auto;
+        width: auto;
+        min-width: max-content;
+        padding: 12px 15px;
+        white-space: nowrap;
+    }
+
+    .content{
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 700px){
+
+    .main2 header{
+        padding: 12px 15px;
+    }
+
+    .brand p{
+        font-size: 13px;
+    }
+
+    .brand img{
+        width: 45px;
+    }
+
+    .student_profile{
+        gap: 5px;
+    }
+
+    .student_container p{
+        font-size: 13px;
+    }
+
+    .content{
+        padding: 20px 15px;
+    }
+
+    .studentwelcome h3{
+        font-size: 1.5rem;
+    }
+
+    .payment_table{
+        min-width: 550px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .brand p{
+        font-size: 11px;
+        margin-left: 8px;
+    }
+
+    .brand img{
+        width: 42px;
+    }
+
+    .student_container p{
+        font-size: 12px;
+    }
+
+    .dropdown_arrow{
+        font-size: 16px;
+    }
+
+    .notification_dropdown, .profile_dropdown{
+        position: fixed;
+        top: 70px;
+        right: 10px;
+        width: calc(100vw - 20px);
+    }
+
+    .sidebar_nav button{
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .content{
+        padding: 15px 12px;
+    }
+
+    .studentwelcome h3{
+        font-size: 1.3rem;
+    }
+
+    .studentwelcome p{
+        font-size: 12px;
+    }
+
+    .payment_table th, .payment_table td{
+        padding: 12px 16px;
+    }
+}
