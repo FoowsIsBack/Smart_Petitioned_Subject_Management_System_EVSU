@@ -89,3 +89,11 @@ function departReports(){
 function adminRejected(){
     window.location.href = "/superadmin/rejected_petitions.php";
 }
+
+function accountingAssessments(){
+    window.location.href = "/accounting/accounting_assessments.php";
+}
+
+function accountingPayment(){
+    window.location.href = "/accounting/accounting_payment.php";
+}
