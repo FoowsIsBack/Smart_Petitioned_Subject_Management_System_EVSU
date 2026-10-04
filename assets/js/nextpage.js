@@ -90,6 +90,10 @@ function adminRejected(){
     window.location.href = "/superadmin/rejected_petitions.php";
 }
 
+function accountingDashboard(){
+    window.location.href = "/accounting/accounting_dashboard.php";
+}
+
 function accountingAssessments(){
     window.location.href = "/accounting/accounting_assessments.php";
 }
